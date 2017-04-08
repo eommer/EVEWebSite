@@ -1,3 +1,6 @@
+
+[Home](index.md)   |    [Documentation](doc/index.html)   |    [APIs](apis.md) 
+
 ## Getting started (dev)
 
 ### Installing the project for visual Studio
