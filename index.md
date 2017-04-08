@@ -12,4 +12,4 @@ For developpers, this website will also explain how to install the project and h
 
 ### Documentation
 
-  [Documentation](gettingStarted.md)
+  [Documentation](doc/index.html)
