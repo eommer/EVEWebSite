@@ -22,7 +22,7 @@
 	Video vid3 = VideoConverter.concatTwoVideos(vid1, vid2);
 ```
 
-[See documentation](class_easy_video_edition_1_1_model_1_1_file_browser.html)
+[see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
 
 **subtitles usage**
 
@@ -39,7 +39,7 @@
 	subs.createSrtFile();
 ```
 
-[See documentation](class_easy_video_edition_1_1_model_1_1_file_browser.html)
+[see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
 
 **Video usage**
 
@@ -55,4 +55,4 @@
 	Console.WriteLine(vid1.calcSize(vid1.size));
 ```
 
-[See documentation](class_easy_video_edition_1_1_model_1_1_file_browser.html)
+[see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
