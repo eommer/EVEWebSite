@@ -11,6 +11,8 @@
 
 ### useful examples
 
+***
+
 **videoConverter usage**
 
 ```c#
@@ -26,6 +28,8 @@
 ```
 
 [see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
+
+***
 
 **subtitles usage**
 
@@ -43,6 +47,8 @@
 ```
 
 [see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
+
+***
 
 **Video usage**
 
