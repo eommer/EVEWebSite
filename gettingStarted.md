@@ -1,6 +1,6 @@
-## Getting started (devloppment)
+## Getting started (dev)
 
-  # Installing the project for visual Studio
+  ### Installing the project for visual Studio
 
   1. Download and install Visual Studio [téléchager](https://www.visualstudio.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.fr%2F)
   2. Clone the repisotory of the github
