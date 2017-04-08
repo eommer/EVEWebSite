@@ -6,7 +6,7 @@
   2. Clone the repisotory of the github
   3. Open EasyVideoEdition.sln with Visual Studio
 
-### Installing the project for visual Studio
+### useful examples
 
 **videoConverter usage**
 
@@ -36,3 +36,18 @@
 	//update or create the srt file
 	subs.createSrtFile();
 ```
+
+**Video usage**
+
+```c#
+	Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
+	//get the extention, the directory and the name of the video
+	vid1.getExtension();
+	vid1.getFileName();
+	vid1.getDirectory();
+	//show the duration of the video with appropriate unit
+	Console.WriteLine(vid1.calDuration(vid1.duration));
+	//show the size of the video with the appropriate unit
+	Console.WriteLine(vid1.calcSize(vid1.size));
+```
+
