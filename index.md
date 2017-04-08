@@ -2,12 +2,12 @@
 [Getting started](gettingStarted.md)   |    [Documentation](doc/index.html)   |    [APIs](apis.md) 
 
 
-###EasyVideoEdition presentation
+### EasyVideoEdition presentation
 
 This website will help you to use EasyVideoEdition.
 For developpers, this website will also explain how to install the project and how to use the code. A documentation is also here to help you
 
-===================================================================================================================================
+***
 
 ### Features
 
@@ -15,7 +15,7 @@ For developpers, this website will also explain how to install the project and h
 + All videos extensions (avi, mp4, mkv,...)
 + Choose the quality of the final video
 
-===================================================================================================================================
+***
 
 ### Licences
 
