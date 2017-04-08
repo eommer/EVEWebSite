@@ -8,4 +8,4 @@ For developpers, this website will also explain how to install the project and h
 ### Getting started (dev)
 ### Documentation
 
-[Documentation](home.html)
+[Documentation](https://github.com/eommer/EVEWebSite/blob/master/gettingStarted.md)
