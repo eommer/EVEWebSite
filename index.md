@@ -6,6 +6,9 @@ For developpers, this website will also explain how to install the project and h
 
 ### Use EasyVideoEdition
 ### Getting started (dev)
+
+  [Getting started](gettingStarted.md)
+
 ### Documentation
 
 [Documentation](gettingStarted.md)
