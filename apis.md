@@ -30,7 +30,7 @@
         </div>
       </div>
       
-        <div class="row">
+      <div class="row">
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
