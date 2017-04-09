@@ -11,6 +11,6 @@
    </script>
   
   <a href="index.md" class="waves-effect waves-light btn-large">Home</a>
-  <a href="gettinStarted.md" class="waves-effect waves-light btn-large">Getting started</a>
+  <a href="gettingStarted.md" class="waves-effect waves-light btn-large">Getting started</a>
   <a href="doc/index.html" class="waves-effect waves-light btn-large">Documentation</a>
   
