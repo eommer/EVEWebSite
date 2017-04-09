@@ -9,11 +9,7 @@
     // Initialize collapsible (uncomment the line below if you use the dropdown variation)
     //$('.collapsible').collapsible();
    </script>
-  
-  <a href="https://eommer.github.io/EVEWebSite/" class="waves-effect waves-light btn-large">Home</a>
-  <a href="https://eommer.github.io/EVEWebSite/gettingStarted.html" class="waves-effect waves-light btn-large">Getting started</a>
-  <a href="doc/index.html" class="waves-effect waves-light btn-large">Documentation</a>
-  
+    
    <nav>
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="left hide-on-med-and-down">
