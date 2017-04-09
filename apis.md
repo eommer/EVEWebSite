@@ -18,14 +18,13 @@
           <div class="card">
             <div class="card-image">
               <img src="office.jpg">
-              <span class="card-title">Card Title</span>
+              <span class="card-title">NReco VideoConverter</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>API allowing to use a media element using ffmpeg</p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <a href="#">Go to the site</a>
             </div>
           </div>
         </div>
