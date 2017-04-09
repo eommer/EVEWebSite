@@ -34,6 +34,9 @@
     <li>
       <div class="collapsible-header">subtitles usage</div>
       <div class="collapsible-body"><span markdown="1">
+      
+      ### sous-titres
+      
 ```c#
 	Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
 	Subtitles subs = new Subtitles(vid1.filePath);
