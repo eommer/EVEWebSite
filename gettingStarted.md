@@ -8,6 +8,10 @@
   1. [Download](https://www.visualstudio.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.fr%2F) and install Visual Studio 
   2. Clone the repisotory of the github
   3. Open EasyVideoEdition.sln with Visual Studio
+  
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 ### useful examples
 
