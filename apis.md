@@ -17,7 +17,8 @@
   <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header">videoConverter usage</div>
-      <div class="collapsible-body"><span>
+      <div class="collapsible-body"><span markdown="1">
+      
         ```c#
           Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
           Video vid2 = new Video(@"C:/Program/name2.avi", name2, 10000);
@@ -29,11 +30,13 @@
           //concatenate videos
           Video vid3 = VideoConverter.concatTwoVideos(vid1, vid2);
         ```
+        
         </span></div>
     </li>
     <li>
       <div class="collapsible-header">subtitles usage</div>
-      <div class="collapsible-body"><span>
+      <div class="collapsible-body"><span markdown="1">
+      
         ```c#
         Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
         Subtitles subs = new Subtitles(vid1.filePath);
@@ -46,11 +49,13 @@
         //update or create the srt file
         subs.createSrtFile();
       ```
+      
       </span></div>
     </li>
     <li>
       <div class="collapsible-header">Video usage</div>
-      <div class="collapsible-body"><span>
+      <div class="collapsible-body"><span markdown="1">
+      
         ```c#
         Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
         //get the extention, the directory and the name of the video
@@ -62,6 +67,7 @@
         //show the size of the video with the appropriate unit
         Console.WriteLine(vid1.calcSize(vid1.size));
         ```
+        
         </span></div>
     </li>
   </ul>
