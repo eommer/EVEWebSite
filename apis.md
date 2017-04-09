@@ -17,7 +17,7 @@
   <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header">videoConverter usage</div>
-      <div class="collapsible-body"><span markdown="1">
+      <div class="collapsible-body"markdown="1"><span>
       
         ```c#
           Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
