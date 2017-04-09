@@ -4,9 +4,10 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
+    // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    //$('.collapsible').collapsible();
    </script>
   
 <ul id="slide-out" class="side-nav">
