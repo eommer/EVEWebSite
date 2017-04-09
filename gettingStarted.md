@@ -1,6 +1,8 @@
 
 [Home](index.md)   |    [Documentation](doc/index.html)   |    [APIs](apis.md) 
 
+<button>Test</button>
+
 ## Getting started (dev)
 
 ### Installing the project for visual Studio
