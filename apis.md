@@ -34,18 +34,18 @@
     <li>
       <div class="collapsible-header">subtitles usage</div>
       <div class="collapsible-body"><span markdown="1">
-        ```c#
-          Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
-          Subtitles subs = new Subtitles(vid1.filePath);
-          //Read the srt file if it already exists one and add subtitles to the list
-          subs.readSrtFile();
-          //add a subtitle to the already existing list
-          subs.addSubtitle("00:00:03,000", "00:00:07,000", "this is a subtitle example");
-          //edit the first subtitle of the list
-          subs.editSubtitle(0, "00:00:03,000", "00:00:07,000", "this is another subtitle example");
-          //update or create the srt file
-          subs.createSrtFile();
-        ```
+```c#
+	Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
+	Subtitles subs = new Subtitles(vid1.filePath);
+	//Read the srt file if it already exists one and add subtitles to the list
+	subs.readSrtFile();
+	//add a subtitle to the already existing list
+	subs.addSubtitle("00:00:03,000", "00:00:07,000", "this is a subtitle example");
+	//edit the first subtitle of the list
+	subs.editSubtitle(0, "00:00:03,000", "00:00:07,000", "this is another subtitle example");
+	//update or create the srt file
+	subs.createSrtFile();
+```
       </span></div>
     </li>
     <li>
