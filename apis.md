@@ -17,7 +17,7 @@
 
 <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="office.jpg">
+      <img class="activator" src="nreco.png">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right"></i>More</span>
