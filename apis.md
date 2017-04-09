@@ -30,6 +30,8 @@
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
 <p>
 
+	<h1>NReco VideoConverter</h1>
+
 	<div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
 		<span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
 		<span class="c1">//Convert video
@@ -64,10 +66,9 @@
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-<p markdown="1">
+<p>
 
-	### some usages of the API
-
+	<h1>NReco Video Informations</h1>
 </p>
     </div>
             <div class="card-action">
