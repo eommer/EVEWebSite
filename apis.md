@@ -13,7 +13,7 @@
  <a href="https://eommer.github.io/EVEWebSite/gettingStarted.html" class="waves-effect waves-light btn-large">Getting started</a>
  <a href="doc/index.html" class="waves-effect waves-light btn-large">Documentation</a>
  
-  <div class="row">
+<div class="row">
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
@@ -28,9 +28,9 @@
             </div>
           </div>
         </div>
-      </div>
+</div>
       
-      <div class="row">
+<div class="row">
         <div class="col s12 m7">
           <div class="card">
             <div class="card-image">
@@ -45,5 +45,5 @@
             </div>
           </div>
         </div>
-      </div>
+</div>
         
