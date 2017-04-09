@@ -16,7 +16,7 @@
  
   <ul class="collapsible" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>videoConverter usage</div>
+      <div class="collapsible-header">videoConverter usage</div>
       <div class="collapsible-body"><span>
         ```c#
           Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
@@ -32,7 +32,7 @@
         </span></div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>subtitles usage</div>
+      <div class="collapsible-header">subtitles usage</div>
       <div class="collapsible-body"><span>
         ```c#
         Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
@@ -49,7 +49,7 @@
       </span></div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Video usage</div>
+      <div class="collapsible-header">Video usage</div>
       <div class="collapsible-body"><span>
         ```c#
         Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
