@@ -10,7 +10,7 @@
     //$('.collapsible').collapsible();
    </script>
   
-  <a href="index.md" class="waves-effect waves-light btn-large">Home</a>
-  <a href="gettingStarted.md" class="waves-effect waves-light btn-large">Getting started</a>
+  <a href="https://eommer.github.io/EVEWebSite/" class="waves-effect waves-light btn-large">Home</a>
+  <a href="https://eommer.github.io/EVEWebSite/GettingStarted" class="waves-effect waves-light btn-large">Getting started</a>
   <a href="doc/index.html" class="waves-effect waves-light btn-large">Documentation</a>
   
