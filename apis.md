@@ -53,14 +53,23 @@
       
 <div class="row">
         <div class="col s12 m7">
-          <div class="card">
+          <div class="card small">
             <div class="card-image">
-              <img src="office2.jpg">
-              <span class="card-title">NReco VideoInformation</span>
+              <img src="nrecoSite.png">
+              <span class="card-title">NReco Video Informations</span>
             </div>
-            <div class="card-content">
-              <p>API allowing to get informations about videos</p>
-            </div>
+<div class="card-content">
+<span class="card-title activator grey-text text-darken-4">NReco Video Informations<i class="material-icons right"></i></span>
+      <p>API allowing to get informations about a video</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+<p markdown="1">
+
+### test
+
+</p>
+    </div>
             <div class="card-action">
               <a href="https://www.nrecosite.com/video_info_net.aspx">Go to the site</a>
             </div>
