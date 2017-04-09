@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/EVEWebSite/assets/css/style.css?v=2d1d5b61b48492947b8b0c0aa3300fef59cc5eb7">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.collapsible').collapsible();
+    });
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+   </script>
+</head>
+    
+      <section class="page-header">
+      <h1 class="project-name">EVEWebSite</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
+      
+      
+    </section>
+  
+  <nav>
+    <div class="nav-wrapper teal lighten-2">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sass.html">Home</a></li>
+        <li><a href="badges.html">Getting started</a></li>
+        <li><a href="collapsible.html">Documentation</a></li>
+        <li><a href="collapsible.html">APIs</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="parallax-container">
+    <div class="parallax"><img src="office.jpg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">APIs</h2>
+      <p class="grey-text text-darken-3 lighten-3">EasyVideoEdition uses somes APIs to run. These APIs ares describe here to help you to use them</p>
+      <div class="row">
+        <div class="col s6">
+       <div class="card small">
+     <div class="card-image">
+                <img src="nrecoSite.png">
+                <span class="card-title"></span>
+     </div>
+              <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right">more_vert</i></span>
+                    <p>API allowing to convert or concat video using ffmpeg</p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">NReco VideoConverter<i class="material-icons right">close</i></span>
+              <p>
+
+                <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
+                  <span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
+                  <span class="c1">//Convert video
+                </span>	<span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid1</span><span class="p">);</span>
+                  <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+                  <span class="c1">//split video
+                </span>	<span class="n">Video</span> <span class="n">vid1Part1</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">splitVideo</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"18"</span><span class="p">);</span>
+                  <span class="c1">//concatenate videos
+                </span>	<span class="n">Video</span> <span class="n">vid3</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">concatTwoVideos</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+                </code></pre>
+                </div>
+
+              </p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.nrecosite.com/video_converter_net.aspx">Go to the site</a>
+              </div>
+    </div>
+    </div>
+    <div class="col s6">
+     <div class="card small">
+     <div class="card-image">
+                <img src="nrecoSite.png">
+                <span class="card-title"></span>
+     </div>
+              <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">NReco Video informations<i class="material-icons right">more_vert</i></span>
+                    <p>API allowing to get informations about videos</p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">NReco Video informations<i class="material-icons right">close</i></span>
+              <p>
+
+                <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
+                  <span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
+                  <span class="c1">//Convert video
+                </span>	<span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid1</span><span class="p">);</span>
+                  <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+                  <span class="c1">//split video
+                </span>	<span class="n">Video</span> <span class="n">vid1Part1</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">splitVideo</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"18"</span><span class="p">);</span>
+                  <span class="c1">//concatenate videos
+                </span>	<span class="n">Video</span> <span class="n">vid3</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">concatTwoVideos</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+                </code></pre>
+                </div>
+
+              </p>
+              </div>
+              <div class="card-action">
+                <a href="https://www.nrecosite.com/video_info_net.aspx">Go to the site</a>
+              </div>
+  </div>
+      
+    </div>
+  </div>
+  
+  <div class="row">
+        <div class="col s6">
+       <div class="card small">
+     <div class="card-image">
+                <img src="unosquare.jpg">
+                <span class="card-title"></span>
+     </div>
+              <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Unosquare ffmediaElement<i class="material-icons right">more_vert</i></span>
+                    <p>API setting mediaelement using ffmpeg</p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Unosquare ffmediaElement<i class="material-icons right">close</i></span>
+              <p>
+
+                <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
+                  <span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
+                  <span class="c1">//Convert video
+                </span>	<span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid1</span><span class="p">);</span>
+                  <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+                  <span class="c1">//split video
+                </span>	<span class="n">Video</span> <span class="n">vid1Part1</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">splitVideo</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"18"</span><span class="p">);</span>
+                  <span class="c1">//concatenate videos
+                </span>	<span class="n">Video</span> <span class="n">vid3</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">concatTwoVideos</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+                </code></pre>
+                </div>
+
+              </p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/unosquare/ffmediaelement">Go to the site</a>
+              </div>
+    </div>
+    </div>
+    <div class="col s6">
+     <div class="card small">
+     <div class="card-image">
+                <img src="zeranoe.png">
+                <span class="card-title"></span>
+     </div>
+              <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Zeranoe ffmpeg<i class="material-icons right">more_vert</i></span>
+                    <p>Static compilation of ffmpeg for windows</p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Zeranoe ffmpeg<i class="material-icons right">close</i></span>
+              <p>
+
+                <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
+                  <span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
+                  <span class="c1">//Convert video
+                </span>	<span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid1</span><span class="p">);</span>
+                  <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+                  <span class="c1">//split video
+                </span>	<span class="n">Video</span> <span class="n">vid1Part1</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">splitVideo</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"18"</span><span class="p">);</span>
+                  <span class="c1">//concatenate videos
+                </span>	<span class="n">Video</span> <span class="n">vid3</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">concatTwoVideos</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+                </code></pre>
+                </div>
+
+              </p>
+              </div>
+              <div class="card-action">
+                <a href="https://ffmpeg.zeranoe.com/builds/">Go to the site</a>
+              </div>
+  </div>
+      
+    </div>
+  </div>
+    </div>
+  </div>
+
+<footer class="page-footer teal lighten-2">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">EasyVideoEdition</h5>
+                <p class="grey-text text-lighten-4">Student project made at ENSIM (Ecole Nationale Supérieure d'Ingérnieurs du Mans).</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Project links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Documentation</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Website</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 ENSIM
+            </div>
+          </div>
+</footer>
