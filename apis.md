@@ -24,7 +24,7 @@
               <span class="card-title"></span>
             </div>
 <div class="card-content">
-<span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right">more</i></span>
+<span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right">more_vert</i></span>
       <p>API allowing to convert or concat video using ffmpeg</p>
     </div>
     <div class="card-reveal">
@@ -60,7 +60,7 @@
               <span class="card-title"></span>
             </div>
 <div class="card-content">
-<span class="card-title activator grey-text text-darken-4">NReco Video Informations<i class="material-icons right">more</i></span>
+<span class="card-title activator grey-text text-darken-4">NReco Video Informations<i class="material-icons right">more_vert</i></span>
       <p>API allowing to get informations about a video</p>
     </div>
     <div class="card-reveal">
@@ -84,7 +84,7 @@
               <span class="card-title"></span>
             </div>
 <div class="card-content">
-<span class="card-title activator grey-text text-darken-4">Unosquare ffmediaElement<i class="material-icons right">more</i></span>
+<span class="card-title activator grey-text text-darken-4">Unosquare ffmediaElement<i class="material-icons right">more_vert</i></span>
       <p>API setting a mediaElement using ffmpeg</p>
     </div>
     <div class="card-reveal">
