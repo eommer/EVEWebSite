@@ -48,9 +48,9 @@ code example
   
 <div class="row">
         <div class="col s12 m7">
-          <div class="card">
+          <div class="card small">
             <div class="card-image">
-              <img src="office.jpg">
+              <img src="nreco.png">
               <span class="card-title">NReco VideoConverter</span>
             </div>
             <div class="card-content">
