@@ -17,7 +17,7 @@
 
 <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="nreco.png">
+      <img class="activator" src="nrecoSite.png">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right"></i>More</span>
@@ -50,7 +50,7 @@ code example
         <div class="col s12 m7">
           <div class="card small">
             <div class="card-image">
-              <img src="nreco.png">
+              <img src="nrecoSite.png">
               <span class="card-title">NReco VideoConverter</span>
             </div>
             <div class="card-content">
