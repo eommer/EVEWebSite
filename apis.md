@@ -20,7 +20,7 @@
           <div class="card small">
             <div class="card-image">
               <img src="nrecoSite.png">
-              <span class="card-title">NReco VideoConverter</span>
+              <span class="card-title"></span>
             </div>
 <div class="card-content">
 <span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right"></i></span>
@@ -56,7 +56,7 @@
           <div class="card small">
             <div class="card-image">
               <img src="nrecoSite.png">
-              <span class="card-title">NReco Video Informations</span>
+              <span class="card-title"></span>
             </div>
 <div class="card-content">
 <span class="card-title activator grey-text text-darken-4">NReco Video Informations<i class="material-icons right"></i></span>
@@ -80,7 +80,7 @@
           <div class="card small">
             <div class="card-image">
               <img src="unosquare.jpg">
-              <span class="card-title">Unosquare ffmediaElement</span>
+              <span class="card-title"></span>
             </div>
 <div class="card-content">
 <span class="card-title activator grey-text text-darken-4">Unosquare ffmediaElement<i class="material-icons right"></i></span>
