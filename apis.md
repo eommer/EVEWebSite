@@ -32,7 +32,7 @@
 
 	API used to convert and concat videos using ffmpeg
 	
-	```
+	```csharp
 		Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
 		Video vid2 = new Video(@"C:/Program/name2.avi", name2, 10000);
 		//Convert video
