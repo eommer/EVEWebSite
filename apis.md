@@ -26,6 +26,9 @@
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
 <p markdown="1">
+
+code example
+
 ```c#
 	Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
 	Video vid2 = new Video(@"C:/Program/name2.avi", name2, 10000);
@@ -37,6 +40,7 @@
 	//concatenate videos
 	Video vid3 = VideoConverter.concatTwoVideos(vid1, vid2);
 ```
+
 </p>
     </div>
  </div>
