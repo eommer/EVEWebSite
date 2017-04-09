@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/EVEWebSite/assets/css/style.css?v=2d1d5b61b48492947b8b0c0aa3300fef59cc5eb7">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.collapsible').collapsible();
+    });
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+     // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    //$('.collapsible').collapsible();  
+    $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrainWidth: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: false, // Displays dropdown below the button
+        alignment: 'left', // Displays dropdown with edge aligned to the left of button
+        stopPropagation: false // Stops event propagation
+      }
+    );
+        
+  </script>
+</head>
+    
+     
+      <section class="page-header">
+      <h1 class="project-name">EVEWebSite</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
+      
+      
+    </section>
+  
+  <nav>
+    <div class="nav-wrapper teal lighten-2">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collapsible.html">Getting started</a></li>
+        <li><a href="doc/index.html">Documentation</a></li>
+        <li><a href="api.html">APIs</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="row">
+ 
+  <!-- Table of Contents -->
+    <div class="col hide-on-small-only s3">
+      <div class="toc-wrapper">
+        <div class="buysellads hide-on-small-only">
+          <!-- CarbonAds Zone Code -->
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=materializecss" id="_carbonads_js"></script>
+        </div>
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#install">Installation</a></li>
+            <li><a href="#examples">Code examples</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="s9">
+    
+    <div id="install">
+      <h4> Installation </h4>
+
+        <ol>
+          <li><a href="https://www.visualstudio.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.fr%2F">Download</a> and install Visual Studio</li>
+          <li>Clone the repisotory of the github</li>
+          <li>Open EasyVideoEdition.sln with Visual Studio</li>
+        </ol>
+      </div>
+      
+    <div id="examples">
+      <h4> Code examples </h4>
+
+      <p><strong>videoConverter usage</strong></p>
+
+        <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
+          <span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
+          <span class="c1">//Convert video
+        </span>	<span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid1</span><span class="p">);</span>
+          <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+          <span class="c1">//split video
+        </span>	<span class="n">Video</span> <span class="n">vid1Part1</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">splitVideo</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"18"</span><span class="p">);</span>
+          <span class="c1">//concatenate videos
+        </span>	<span class="n">Video</span> <span class="n">vid3</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">concatTwoVideos</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+        </code></pre>
+        </div>
+
+        <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
+
+        <hr />
+
+        <p><strong>subtitles usage</strong></p>
+
+        <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
+          <span class="n">Subtitles</span> <span class="n">subs</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Subtitles</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">filePath</span><span class="p">);</span>
+          <span class="c1">//Read the srt file if it already exists one and add subtitles to the list
+        </span>	<span class="n">subs</span><span class="p">.</span><span class="nf">readSrtFile</span><span class="p">();</span>
+          <span class="c1">//add a subtitle to the already existing list
+        </span>	<span class="n">subs</span><span class="p">.</span><span class="nf">addSubtitle</span><span class="p">(</span><span class="s">"00:00:03,000"</span><span class="p">,</span> <span class="s">"00:00:07,000"</span><span class="p">,</span> <span class="s">"this is a subtitle example"</span><span class="p">);</span>
+          <span class="c1">//edit the first subtitle of the list
+        </span>	<span class="n">subs</span><span class="p">.</span><span class="nf">editSubtitle</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">"00:00:03,000"</span><span class="p">,</span> <span class="s">"00:00:07,000"</span><span class="p">,</span> <span class="s">"this is another subtitle example"</span><span class="p">);</span>
+          <span class="c1">//update or create the srt file
+        </span>	<span class="n">subs</span><span class="p">.</span><span class="nf">createSrtFile</span><span class="p">();</span>
+        </code></pre>
+        </div>
+
+        <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
+
+        <hr />
+
+        <p><strong>Video usage</strong></p>
+
+        <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
+          <span class="c1">//get the extention, the directory and the name of the video
+        </span>	<span class="n">vid1</span><span class="p">.</span><span class="nf">getExtension</span><span class="p">();</span>
+          <span class="n">vid1</span><span class="p">.</span><span class="nf">getFileName</span><span class="p">();</span>
+          <span class="n">vid1</span><span class="p">.</span><span class="nf">getDirectory</span><span class="p">();</span>
+          <span class="c1">//show the duration of the video with appropriate unit
+        </span>	<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="nf">calDuration</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">duration</span><span class="p">));</span>
+          <span class="c1">//show the size of the video with the appropriate unit
+        </span>	<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="nf">calcSize</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">size</span><span class="p">));</span>
+        </code></pre>
+        </div>
+
+        <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
+      </div>
+    </div>
+    
+  
+  </div>
+  
