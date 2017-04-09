@@ -10,13 +10,6 @@
     //$('.collapsible').collapsible();
    </script>
     
-   <nav>
-    <div class="nav-wrapper">
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="https://eommer.github.io/EVEWebSite/">Home</a></li>
-        <li><a href="https://eommer.github.io/EVEWebSite/gettingStarted.html">Getting started</a></li>
-        <li><a href="doc/index.html">Documentation</a></li>
-      </ul>
-    </div>
-  </nav>
-  
+ <a href="https://eommer.github.io/EVEWebSite/" class="waves-effect waves-light btn-large">Home</a>
+ <a href="https://eommer.github.io/EVEWebSite/gettingStarted.html" class="waves-effect waves-light btn-large">Getting started</a>
+ <a href="doc/index.html" class="waves-effect waves-light btn-large">Documentation</a>
