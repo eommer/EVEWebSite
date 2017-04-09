@@ -18,6 +18,9 @@
     <li>
       <div class="collapsible-header">videoConverter usage</div>
       <div class="collapsible-body"><span markdown="1"> 
+      
+      some possible usages of the videoConverter
+      
         ```c#
           Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
           Video vid2 = new Video(@"C:/Program/name2.avi", name2, 10000);
@@ -35,7 +38,7 @@
       <div class="collapsible-header">subtitles usage</div>
       <div class="collapsible-body"><span markdown="1">
       
-      ### sous-titres
+      some possible usages of subtitles
       
 ```c#
 	Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
@@ -54,6 +57,9 @@
     <li>
       <div class="collapsible-header">Video usage</div>
       <div class="collapsible-body"><span markdown="1">
+      
+      some possible usages of videos
+      
         ```c#
           Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
           //get the extention, the directory and the name of the video
