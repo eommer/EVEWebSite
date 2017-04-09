@@ -64,7 +64,7 @@
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-<p markdown="1">
+<p markdown=1>
 
 ### test
 
