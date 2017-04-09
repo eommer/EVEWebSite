@@ -20,7 +20,7 @@
       <img class="activator" src="office.jpg">
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right"></i></span>
+      <span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right"></i>More</span>
       <p>API allowing to convert or concat video using ffmpeg</p>
     </div>
     <div class="card-reveal">
