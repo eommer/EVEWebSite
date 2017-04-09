@@ -12,7 +12,34 @@
  <a href="https://eommer.github.io/EVEWebSite/" class="waves-effect waves-light btn-large">Home</a>
  <a href="https://eommer.github.io/EVEWebSite/gettingStarted.html" class="waves-effect waves-light btn-large">Getting started</a>
  <a href="doc/index.html" class="waves-effect waves-light btn-large">Documentation</a>
- 
+
+
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/office.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">NReco VideoConverter<i class="material-icons right">more_vert</i></span>
+      <p>API allowing to convert or concat video using ffmpeg</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p markdown="1">
+```c#
+	Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
+	Video vid2 = new Video(@"C:/Program/name2.avi", name2, 10000);
+	//Convert video
+	VideoConverter.convertVideo(1920, 1080, 30, "h264", "ac3", vid1);
+	VideoConverter.convertVideo(1920, 1080, 30, "h264", "ac3", vid2);
+	//split video
+	Video vid1Part1 = VideoConverter.splitVideo(vid1, 1, "00", "00", "00", "00", "00", "18");
+	//concatenate videos
+	Video vid3 = VideoConverter.concatTwoVideos(vid1, vid2);
+```</p>
+    </div>
+ </div>
+  
+  
 <div class="row">
         <div class="col s12 m7">
           <div class="card">
