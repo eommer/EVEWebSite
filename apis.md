@@ -28,19 +28,19 @@
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-<p markdown="1">
+<p>
 
-	```c#
-		Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
-		Video vid2 = new Video(@"C:/Program/name2.avi", name2, 10000);
-		//Convert video
-		VideoConverter.convertVideo(1920, 1080, 30, "h264", "ac3", vid1);
-		VideoConverter.convertVideo(1920, 1080, 30, "h264", "ac3", vid2);
-		//split video
-		Video vid1Part1 = VideoConverter.splitVideo(vid1, 1, "00", "00", "00", "00", "00", "18");
-		//concatenate videos
-		Video vid3 = VideoConverter.concatTwoVideos(vid1, vid2);
-	```
+	<div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
+		<span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
+		<span class="c1">//Convert video
+	</span>	<span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid1</span><span class="p">);</span>
+		<span class="n">VideoConverter</span><span class="p">.</span><span class="nf">convertVideo</span><span class="p">(</span><span class="m">1920</span><span class="p">,</span> <span class="m">1080</span><span class="p">,</span> <span class="m">30</span><span class="p">,</span> <span class="s">"h264"</span><span class="p">,</span> <span class="s">"ac3"</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+		<span class="c1">//split video
+	</span>	<span class="n">Video</span> <span class="n">vid1Part1</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">splitVideo</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"00"</span><span class="p">,</span> <span class="s">"18"</span><span class="p">);</span>
+		<span class="c1">//concatenate videos
+	</span>	<span class="n">Video</span> <span class="n">vid3</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">concatTwoVideos</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
+	</code></pre>
+	</div>
 
 </p>
     </div>
