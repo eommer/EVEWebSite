@@ -35,13 +35,13 @@
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 330) {
-            $('#navbar1').css("display","block");
-            $('#navbar2').css("display","none");
+            $('#navbar1').css("display","inline");
+            $('#navbarTop').css("display","none");
           }
 
           if ($(window).scrollTop() < 331) {
             $('#navbar1').css("display","none");
-            $('#navbar2').css("display","block");
+            $('#navbarTop').css("display","inline");
           }
         });
       });
@@ -49,6 +49,19 @@
     </script>
     
 </head>
+  
+    <div id="navbarTop" class="navbar-fixed" style="display: none;">
+        <nav style="display : none;">
+          <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="GettingStarted.html">Getting started</a></li>
+              <li><a href="doc/index.html">Documentation</a></li>
+              <li><a href="api.html">APIs</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
   
       <section class="page-header" id="header">
       <h1 class="project-name">EVEWebSite</h1>
@@ -71,18 +84,7 @@
     <div class="parallax"><img src="office.jpg"></div>
   </div>
   <div class="section white">
-    
-      <nav id="navbar2" style="display : none;">
-        <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
-          <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="GettingStarted.html">Getting started</a></li>
-            <li><a href="doc/index.html">Documentation</a></li>
-            <li><a href="api.html">APIs</a></li>
-          </ul>
-        </div>
-      </nav>
-    
+      
     <div class="row container">
 
       <ul class="collapsible" data-collapsible="accordion">
