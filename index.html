@@ -33,12 +33,14 @@
 
         console.log($(window).scrollTop());
 
-        if ($(window).scrollTop() > 250) {
+        if ($(window).scrollTop() > 300) {
           $('#navbar').addClass('navbar-fixed');
+          $('#navbar').css({'margin-top':'0px'})
         }
 
-        if ($(window).scrollTop() < 251) {
+        if ($(window).scrollTop() < 301) {
           $('#navbar').removeClass('navbar-fixed');
+          $('#navbar').css({'margin-top':'300px'})
         }
       });
     });
@@ -46,7 +48,7 @@
     
 </head>
         
-      <section class="page-header">  
+      <section class="page-header" style="height:300px;">  
         <h1 class="project-name">EVEWebSite</h1>
         <h2 class="project-tagline"></h2>
         <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
