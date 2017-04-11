@@ -28,19 +28,18 @@
     $(document).ready(function(){
       $('.scrollspy').scrollSpy();
     });   
-    
-    window.addEventListener('scroll', function (evt) {
-    // This value is your scroll distance from the top
-    var distance_from_top = document.body.scrollTop;
+    $(function() {
+      //caches a jQuery object containing the header element
+      var header = $(".clearHeader");
+      $(window).scroll(function() {
+          var scroll = $(window).scrollTop();
 
-    // The user has scrolled to the tippy top of the page. Set appropriate style.
-    if (distance_from_top === 300) {
-      document.getElementById("navbar").className = "";
-    }
-    // The user has scrolled down the page.
-    if(distance_from_top > 300) {
-      document.getElementById("navbar").className = "navbar-fixed";
-    }
+          if (scroll >= 300) {
+              nav..addClass("navbar-fixed");
+          } else {
+              nav.removeClass("navbar-fixed");
+          }
+      });
   });
   </script>
     
@@ -54,7 +53,7 @@
         <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
       </section>
    
-  <div id="navbar" class="navbar-fixed">
+  <div id="navbar">
     <nav>
       <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
         <ul id="nav-mobile" class="left hide-on-med-and-down">
