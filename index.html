@@ -12,43 +12,50 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.collapsible').collapsible();
-    });
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-     // Initialize collapse button
-    $(".button-collapse").sideNav();
-    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    //$('.collapsible').collapsible();  
-    $('.dropdown-button').dropdown('open');
-    $('.dropdown-button').dropdown('close');
-    $(document).ready(function(){
-      $('.scrollspy').scrollSpy();
-    });   
-    $(document).ready(function() {
-      $(window).scroll(function () { 
-
-        console.log($(window).scrollTop());
-
-        if ($(window).scrollTop() > 315) {
-          $('#navbar').addClass('navbar-fixed');
-          $('#navbar').css({'margin-top':'0px'})
-        }
-
-        if ($(window).scrollTop() < 316) {
-          $('#navbar').removeClass('navbar-fixed');
-          $('#navbar').css({'margin-top':'315px'})
-        }
+    <script>
+      $(document).ready(function(){
+        $('.collapsible').collapsible();
       });
-    });
-  </script>
+      $(document).ready(function(){
+        $('.parallax').parallax();
+      });
+       // Initialize collapse button
+      $(".button-collapse").sideNav();
+      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+      //$('.collapsible').collapsible();  
+      $('.dropdown-button').dropdown('open');
+      $('.dropdown-button').dropdown('close');
+      $(document).ready(function(){
+        $('.scrollspy').scrollSpy();
+      });   
+      $(document).ready(function() {
+        $(window).scroll(function () { 
+
+          console.log($(window).scrollTop());
+
+          if ($(window).scrollTop() > 315) {
+            $('#navbar').addClass('navbar-fixed');
+            $('#navbar').css({'margin-top':'0px'})
+          }
+
+          if ($(window).scrollTop() < 316) {
+            $('#navbar').removeClass('navbar-fixed');
+            $('#navbar').css({'margin-top':'0px'})
+          }
+        });
+      });
+    </script>
     
 </head>
+ 
+        
+      <section class="page-header">  
+        <h1 class="project-name">EVEWebSite</h1>
+        <h2 class="project-tagline"></h2>
+        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
+      </section>
   
-  <div id="navbar">
+    <div id="navbar">
     <nav>
       <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
         <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -60,12 +67,6 @@
       </div>
     </nav>
   </div>
-        
-      <section class="page-header" style="height:300px;">  
-        <h1 class="project-name">EVEWebSite</h1>
-        <h2 class="project-tagline"></h2>
-        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
-      </section>
    
   
   
