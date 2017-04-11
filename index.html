@@ -37,11 +37,13 @@
           if ($(window).scrollTop() > 315) {
             $('#navbar').addClass('navbar-fixed');
             $('#navbar').css({'margin-top':'0px'});
+            $('#header').css({'height':'0px'});
           }
 
           if ($(window).scrollTop() < 316) {
             $('#navbar').removeClass('navbar-fixed');
             $('#navbar').css({'margin-top':'0px'});
+            $('#header').css({'height':'290px'});
           }
         });
       });
@@ -50,7 +52,7 @@
     
 </head>
   
-      <section class="page-header" style="height : 50px;">
+      <section class="page-header" style="height : 290px;">
       <h1 class="project-name">EVEWebSite</h1>
         <h2 class="project-tagline"></h2>  
         <a href="https://github.com/eommer/EasyVideoEdition" class="btn">View on GitHub</a>
