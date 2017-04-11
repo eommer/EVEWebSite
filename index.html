@@ -35,9 +35,11 @@
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 315) {
-            $('#navbar').addClass('navbar-fixed');
-            $('#navbar').css({'margin-top':'0px'});
             $('#header').css({'height':'0px'});
+            $('#navbar').css({'margin-top':'0px'});
+            $('#navbar').addClass('navbar-fixed');
+
+
           }
 
           if ($(window).scrollTop() < 316) {
