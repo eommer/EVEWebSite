@@ -32,6 +32,7 @@
       $(document).ready(function() {
         
         $('#navbarTop').hide();
+        $('#navbar1').show();
         
       });
       
@@ -42,10 +43,12 @@
 
           if ($(window).scrollTop() > 330) {
            $('#navbarTop').show();
+           $('#navbar1').hide();
           }
 
           if ($(window).scrollTop() < 331) {
             $('#navbarTop').hide();
+            $('#navbar1').show();
           }
         });
       });
