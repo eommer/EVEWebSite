@@ -35,13 +35,13 @@
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 330) {
-            $('#navbar1').css("display","inline");
-            $('#navbarTop').css("display","none");
+            //$('#navbar1').css("display","inline");
+           // $('#navbarTop').css("display","none");
           }
 
           if ($(window).scrollTop() < 331) {
-            $('#navbar1').css("display","none");
-            $('#navbarTop').css("display","inline");
+            //$('#navbar1').css("display","none");
+            //$('#navbarTop').css("display","inline");
           }
         });
       });
@@ -51,7 +51,7 @@
 </head>
   
 <body>
-    <div id="navbarTop" class="navbar-fixed" style="display: none;">
+    <div id="navbarTop" class="navbar-fixed">
         <nav style="display : none;">
           <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
             <ul id="nav-mobile" class="left hide-on-med-and-down">
