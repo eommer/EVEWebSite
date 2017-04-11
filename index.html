@@ -36,13 +36,13 @@
           if ($(window).scrollTop() > 315) {
             $('#navbar').addClass('navbar-fixed');
             $('#navbar').css({'margin-top':'0px'})
-            $('#header').css({'height' : '0px'})
+            $('#header').hide();
           }
 
           if ($(window).scrollTop() < 316) {
             $('#navbar').removeClass('navbar-fixed');
             $('#navbar').css({'margin-top':'0px'})
-            $('#header').css({'height' : '330px'})
+            $('#header').show();
           }
         });
       });
