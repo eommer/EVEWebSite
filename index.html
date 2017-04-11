@@ -28,19 +28,20 @@
     $(document).ready(function(){
       $('.scrollspy').scrollSpy();
     });   
-    (function($){
-    $(document).ready(function(){
-        $(document).scroll(function(){
-            var scrollTop = $(document).scrollTop();
-            if(scrollTop > 300){
-                $(".navbar").css("position", "fixed");
-            }
-            else {
-                $(".navbar").css("position", "static");
-            }
-        });
+    $(document).ready(function() {
+      $(window).scroll(function () { 
+
+        console.log($(window).scrollTop());
+
+        if ($(window).scrollTop() > 550) {
+          $('#navbar').addClass('navbar-fixed');
+        }
+
+        if ($(window).scrollTop() < 551) {
+          $('#navbar').removeClass('navbar-fixed');
+        }
+      });
     });
-  })(jQuery);
   </script>
     
 </head>
@@ -51,7 +52,7 @@
         <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
       </section>
    
-  <div id="navbar" class="">
+  <div id="navbar">
     <nav>
       <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
         <ul id="nav-mobile" class="left hide-on-med-and-down">
