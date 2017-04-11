@@ -37,9 +37,41 @@
     $(document).ready(function(){
     $('.scrollspy').scrollSpy();
     });
+    
+    $(document).ready(function() {
+        
+        $('#navbarTop').hide();
+        
+      });
+      
+      $(document).ready(function() {
+        $(window).scroll(function () { 
+          console.log($(window).scrollTop());
+          if ($(window).scrollTop() > 350) {
+           $('#navbarTop').show();
+          }
+          if ($(window).scrollTop() < 351) {
+            $('#navbarTop').hide();
+          }
+        });
+      });
         
   </script>
 </head>
+  
+<body>
+    <div id="navbarTop" class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="GettingStarted.html">Getting started</a></li>
+              <li><a href="doc/index.html">Documentation</a></li>
+              <li><a href="api.html">APIs</a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
     
      <div  style="z-index: 10; position: relative;">
       <section id="topPage" class="page-header">
@@ -173,6 +205,7 @@
   </div>
   </div>
   
+  </body>  
   
 <div  style="z-index: 10; position: relative;">
   <footer class="page-footer cyan lighten-2">
