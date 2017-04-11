@@ -27,10 +27,23 @@
     $('.dropdown-button').dropdown('close');
     $(document).ready(function(){
       $('.scrollspy').scrollSpy();
-    });
+    });   
+    
+    window.addEventListener('scroll', function (evt) {
+    // This value is your scroll distance from the top
+    var distance_from_top = document.body.scrollTop;
 
-        
+    // The user has scrolled to the tippy top of the page. Set appropriate style.
+    if (distance_from_top === 300) {
+      document.getElementById("navbar").className = "";
+    }
+    // The user has scrolled down the page.
+    if(distance_from_top > 300) {
+      document.getElementById("navbar").className = "navbar-fixed";
+    }
+  });
   </script>
+    
 </head>
 <body>
     
@@ -41,16 +54,18 @@
         <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
       </section>
    
-  <nav>
-    <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="GettingStarted.html">Getting started</a></li>
-        <li><a href="doc/index.html">Documentation</a></li>
-        <li><a href="api.html">APIs</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar">
+    <nav>
+      <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="GettingStarted.html">Getting started</a></li>
+          <li><a href="doc/index.html">Documentation</a></li>
+          <li><a href="api.html">APIs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   
 
   
