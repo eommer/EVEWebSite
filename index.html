@@ -35,15 +35,11 @@
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 315) {
-            $('#header').css({'height':'0px'});
             $('#navbar').css({'position':'fixed'});
-            $('#navbar').css({'margin-top':'0px'});
           }
 
           if ($(window).scrollTop() < 316) {
-            $('#header').css({'height':'290px'});
             $('#navbar').css({'position':'relative'});
-            $('#navbar').css({'margin-top':'0px'});
           }
         });
       });
