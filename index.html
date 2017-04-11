@@ -35,13 +35,13 @@
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 315) {
-            $('#navbar1').hide();
-            $('#navbar2').show();
+            $('#navbar1').css("display","block")
+            $('#navbar2').css("display","none")
           }
 
           if ($(window).scrollTop() < 316) {
-            $('#navbar1').show();
-            $('#navbar2').hide();
+            $('#navbar1').css("display","none")
+            $('#navbar2').css("display","block")
           }
         });
       });
@@ -71,9 +71,8 @@
     <div class="parallax"><img src="office.jpg"></div>
   </div>
   <div class="section white">
-    <div class="row container">
-      
-      <nav id="navbar2">
+    
+      <nav id="navbar2" style="display : none;">
         <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
           <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li class="active"><a href="index.html">Home</a></li>
@@ -83,6 +82,8 @@
           </ul>
         </div>
       </nav>
+    
+    <div class="row container">
 
       <ul class="collapsible" data-collapsible="accordion">
         <li style="margin: 20px;">
