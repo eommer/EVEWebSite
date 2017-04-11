@@ -47,11 +47,13 @@
       $(document).ready(function() {
         $(window).scroll(function () { 
           console.log($(window).scrollTop());
-          if ($(window).scrollTop() > 350) {
+          if ($(window).scrollTop() > 290) {
            $('#navbarTop').show();
+           $('#navbar1').hide();
           }
-          if ($(window).scrollTop() < 351) {
+          if ($(window).scrollTop() < 291) {
             $('#navbarTop').hide();
+            $('#navbar1').show();
           }
         });
       });
