@@ -28,19 +28,19 @@
     $(document).ready(function(){
       $('.scrollspy').scrollSpy();
     });   
-    $(function() {
-      //caches a jQuery object containing the header element
-      var nav = $('#navbar');
-      $(window).scroll(function() {
-          var scroll = $(window).scrollTop();
-
-          if (scroll >= 300) {
-              nav.revomeClass("").addClass("navbar-fixed");
-          } else {
-              nav.removeClass("navbar-fixed").addClass("");
-          }
-      });
-  });
+    (function($){
+    $(document).ready(function(){
+        $(document).scroll(function(){
+            var scrollTop = $(document).scrollTop();
+            if(scrollTop > 300){
+                $(".navbar").css("position", "fixed");
+            }
+            else {
+                $(".navbar").css("position", "static");
+            }
+        });
+    });
+  })(jQuery);
   </script>
     
 </head>
