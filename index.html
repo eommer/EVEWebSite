@@ -33,27 +33,21 @@
 
         console.log($(window).scrollTop());
 
-        if ($(window).scrollTop() > 300) {
+        if ($(window).scrollTop() > 315) {
           $('#navbar').addClass('navbar-fixed');
           $('#navbar').css({'margin-top':'0px'})
         }
 
-        if ($(window).scrollTop() < 301) {
+        if ($(window).scrollTop() < 316) {
           $('#navbar').removeClass('navbar-fixed');
-          $('#navbar').css({'margin-top':'0px'})
+          $('#navbar').css({'margin-top':'315px'})
         }
       });
     });
   </script>
     
 </head>
-        
-      <section class="page-header" style="height:300px;">  
-        <h1 class="project-name">EVEWebSite</h1>
-        <h2 class="project-tagline"></h2>
-        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
-      </section>
-   
+  
   <div id="navbar">
     <nav>
       <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
@@ -66,6 +60,14 @@
       </div>
     </nav>
   </div>
+        
+      <section class="page-header" style="height:300px;">  
+        <h1 class="project-name">EVEWebSite</h1>
+        <h2 class="project-tagline"></h2>
+        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
+      </section>
+   
+  
   
   <div class="parallax-container">
     <div class="parallax"><img src="office.jpg"></div>
