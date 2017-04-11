@@ -8,28 +8,21 @@
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/EVEWebSite/assets/css/style.css?v=2d1d5b61b48492947b8b0c0aa3300fef59cc5eb7">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script>
-      
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
     $(document).ready(function(){
       $('.collapsible').collapsible();
     });
     $(document).ready(function(){
       $('.parallax').parallax();
     });
-    // Initialize collapse button
+     // Initialize collapse button
     $(".button-collapse").sideNav();
     // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    $('.collapsible').collapsible();
-    // Show sideNav
-    $('.button-collapse').sideNav('show');
-    // Hide sideNav
-    $('.button-collapse').sideNav('hide');
-    // Destroy sideNav
-    $('.button-collapse').sideNav('destroy');
+    //$('.collapsible').collapsible();
     $('.dropdown-button').dropdown({
         inDuration: 300,
         outDuration: 225,
@@ -41,31 +34,30 @@
         stopPropagation: false // Stops event propagation
       }
     );
-      
     $(document).ready(function(){
     $('.scrollspy').scrollSpy();
     });
-    
+
     $(document).ready(function() {
-        
+
         $('#navbarTop').hide();
-        
+
       });
-      
-    $(document).ready(function() {
-      $(window).scroll(function () { 
-        console.log($(window).scrollTop());
-        if ($(window).scrollTop() > 290) {
-         $('#navbarTop').show();
-         $('#navbar1').hide();
-        }
-        if ($(window).scrollTop() < 291) {
-          $('#navbarTop').hide();
-          $('#navbar1').show();
-        }
+
+      $(document).ready(function() {
+        $(window).scroll(function () {
+          console.log($(window).scrollTop());
+          if ($(window).scrollTop() > 290) {
+           $('#navbarTop').show();
+           $('#navbar1').hide();
+          }
+          if ($(window).scrollTop() < 291) {
+            $('#navbarTop').hide();
+            $('#navbar1').show();
+          }
+        });
       });
-    });
-        
+
   </script>
 </head>
 
@@ -82,18 +74,18 @@
           </div>
         </nav>
     </div>
-    
+
      <div  style="z-index: 10; position: relative;">
       <section id="topPage" class="page-header">
       <h1 class="project-name">EVEWebSite</h1>
       <h2 class="project-tagline"></h2>
-      
+
         <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
 
-      
+
       </section>
      </div>
-  
+
   <nav id="navbar1">
     <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
       <ul id="nav-mobile" class="left">
@@ -104,23 +96,31 @@
       </ul>
     </div>
   </nav>
-  
-  
-      <ul id="slide-out" class="side-nav" style="z-index: 15;"> 
-        <li><a href="#install" class="white-text" >Installation</a></li>
-        <li><a href="#examples" class="white-text" >Code examples</a></li>
-        <li><a href="#exConv" class="white-text"  style="margin-left: 15px;margin-right: 15px;"><div>Video Converter</div></a></li>
-        <li><a href="#exSub" class="white-text"  style="margin-left: 15px;margin-right: 15px;"><div>Subtitles</div></a></li>
-        <li><a href="#exVid" class="white-text"  style="margin-left: 15px;margin-right: 15px;"><div>Video</div></a></li>
-        <li><a href="#files" class="white-text" >Useful files</a></li>
-      </ul>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-     
+
   <div class="row">
- 
-    <div class="col s12" style="padding: 10px;margin-right:10%; margin-left:10%;">
-    
-    <div id="install"  class="section scrollspy hoverable" >
+
+    <div style="margin-right: 10%; margin-top: 30px;">
+
+   <div class="col s3 ">
+     <ul class="side-nav fixed" style="transform: translateX(0%);">
+       <li>
+          <div class="toc-wrapper pinned cyan lighten-2 hoverable z-depth-3" style="top: 0px;bottom: 0px;left: 0px;z-index: 1; position: absolute;padding-top: 350px;">
+              <ul class="section table-of-contents">
+                <li><a href="#install" class="white-text" >Installation</a></li>
+                <li><a href="#examples" class="white-text" >Code examples</a></li>
+                  <li><a href="#exConv" class="white-text"  style="margin-left: 15px;margin-right: 15px;"><div>Video Converter</div></a></li>
+                  <li><a href="#exSub" class="white-text"  style="margin-left: 15px;margin-right: 15px;"><div>Subtitles</div></a></li>
+                  <li><a href="#exVid" class="white-text"  style="margin-left: 15px;margin-right: 15px;"><div>Video</div></a></li>
+                <li><a href="#files" class="white-text" >Useful files</a></li>
+              </ul>
+           </div>
+       </li>
+     </ul>
+  </div>
+
+    <div class="col s9">
+
+    <div id="install"  class="section scrollspy hoverable" style="padding: 10px;">
       <h4> Installation </h4>
 
         <ol>
@@ -129,7 +129,7 @@
           <li>Open EasyVideoEdition.sln with Visual Studio</li>
         </ol>
       </div>
-      
+
     <div id="examples" class="hoverable" style="padding: 10px;">
       <h4> Code examples </h4>
 
@@ -151,9 +151,9 @@
         <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
 
       </div>
-        
+
       <div id="exSub" class="section scrollspy">
-        
+
         <p><strong>subtitles usage</strong></p>
 
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
@@ -174,7 +174,7 @@
       </div>
 
       <div id="exVid" class="section scrollspy">
-      
+
         <p><strong>Video usage</strong></p>
 
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
@@ -190,29 +190,29 @@
         </div>
 
         <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
-      
+
         </div>
        </div>
-      
+
       <div id="files" class="section scrollspy hoverable" style="padding: 10px;">
-      
+
       <h4> Useful files </h4>
-      
+
         <ul>
           <li><a href="https://www.visualstudio.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.fr%2F">Naming convention</a></li>
           <li><a href="https://www.visualstudio.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.fr%2F">Specifications</a></li>
           <li><a href="https://www.visualstudio.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.fr%2F">Apis files</a></li>
         </ul>
-      
+
     </div>
-      
+
     </div>
-      
+
   </div>
   </div>
-  
-  </body>  
-  
+
+  </body>
+
 <div  style="z-index: 10; position: relative;">
   <footer class="page-footer cyan lighten-2">
           <div class="container">
