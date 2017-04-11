@@ -30,18 +30,22 @@
       }); 
       
       $(document).ready(function() {
+        
+        $('#navbarTop').hide();
+        
+      });
+      
+      $(document).ready(function() {
         $(window).scroll(function () { 
 
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 330) {
-            //$('#navbar1').css("display","inline");
-           // $('#navbarTop').css("display","none");
+           $('#navbarTop').show();
           }
 
           if ($(window).scrollTop() < 331) {
-            //$('#navbar1').css("display","none");
-            //$('#navbarTop').css("display","inline");
+            $('#navbarTop').hide();
           }
         });
       });
