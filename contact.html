@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/EVEWebSite/assets/css/style.css?v=2d1d5b61b48492947b8b0c0aa3300fef59cc5eb7">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.collapsible').collapsible();
+    });
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+     // Initialize collapse button
+    $(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    //$('.collapsible').collapsible();  
+    $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrainWidth: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: false, // Displays dropdown below the button
+        alignment: 'left', // Displays dropdown with edge aligned to the left of button
+        stopPropagation: false // Stops event propagation
+      }
+    );
+    
+    $(document).ready(function() {
+        
+        $('#navbarTop').hide();
+        
+      });
+      
+      $(document).ready(function() {
+        $(window).scroll(function () { 
+          console.log($(window).scrollTop());
+          if ($(window).scrollTop() > 290) {
+           $('#navbarTop').show();
+           $('#navbar1').hide();
+          }
+          if ($(window).scrollTop() < 291) {
+            $('#navbarTop').hide();
+            $('#navbar1').show();
+          }
+        });
+      });
+        
+  </script>
+</head>
+  
+<body>
+    <div id="navbarTop" class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
+            <ul id="nav-mobile" class="left">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="GettingStarted.html">Getting started</a></li>
+              <li><a href="docu/html/classes.html">Documentation</a></li>
+              <li class="active"><a href="api.html">APIs</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    
+     
+      <section class="page-header">
+      <h1 class="project-name">Easy Video Edition</h1>
+        <h2 class="project-tagline"></h2>  
+        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
+      </section>
+  
+  <nav id="navbar1">
+    <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%">
+      <ul id="nav-mobile" class="left">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="GettingStarted.html">Getting started</a></li>
+        <li><a href="docu/html/classes.html">Documentation</a></li>
+        <li class="active"><a href="api.html">APIs</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+</body>
+
+<footer class="page-footer cyan lighten-2">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">EasyVideoEdition</h5>
+                <p class="grey-text text-lighten-4">Student project made at ENSIM (Ecole Nationale Supérieure d'Ingérnieurs du Mans).</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Project links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Documentation</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Website</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 ENSIM
+            </div>
+          </div>
+</footer>
