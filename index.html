@@ -29,26 +29,23 @@
         $('.scrollspy').scrollSpy();
       }); 
       
-      $(document).ready(function() {
+      $(document).ready(function(){
+        //$('#navbarTop').css( "backgroundColor", "#0277bd");
+        $('#navbarTop').css( "opacity", "0.3");
         
-        $('#navbarTop').hide();
-        $('#navbar1').show();
-        
-      });
+      }); 
       
       $(document).ready(function() {
         $(window).scroll(function () { 
 
           console.log($(window).scrollTop());
 
-          if ($(window).scrollTop() > 270) {
-           $('#navbarTop').show();
-           $('#navbar1').hide();
+          if ($(window).scrollTop() > 0) {
+           $('#navbarTop').css( "opacity", "1");
           }
 
-          if ($(window).scrollTop() < 271) {
-            $('#navbarTop').hide();
-            $('#navbar1').show();
+          if ($(window).scrollTop() < 1) {
+            $('#navbarTop').css( "opacity", "0.3");
           }
         });
       });
@@ -62,10 +59,10 @@
         <nav>
           <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%; height: 10vh;">
             <ul id="nav-mobile" class="left">
-              <li class="active" style="height: 10vh;"><a href="index.html">Home</a></li>
-              <li><a href="GettingStarted.html" style="height: 10vh;">Getting started</a></li>
-              <li><a href="api.html" style="height: 10vh;">APIs</a></li>
-              <li><a href="doc/index.html" style="height: 10vh;">Documentation</a></li>              
+              <li class="active" style="height: 10vh; vertical-align: middle;"><a href="index.html">Home</a></li>
+              <li><a href="GettingStarted.html" style="height: 10vh; vertical-align: middle;">Getting started</a></li>
+              <li><a href="api.html" style="height: 10vh; vertical-align: middle;">APIs</a></li>
+              <li><a href="doc/index.html" style="height: 10vh; vertical-align: middle;">Documentation</a></li>              
             </ul>
           </div>
         </nav>
@@ -78,17 +75,6 @@
         <a href="https://github.com/clement-chollet/Easy-Video-Edition" class="btn">View on GitHub</a>
       </section>
   -->
-  
-    <nav id="navbar1" style="height: 10vh;">
-      <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%; height: 10vh; filter: alpha(opacity=50);">
-        <ul id="nav-mobile" class="left">
-          <li class="active" style="height: 10vh;"><a href="index.html">Home</a></li>
-          <li><a href="GettingStarted.html" style="height: 10vh;">Getting started</a></li>
-          <li><a href="api.html" style="height: 10vh;">APIs</a></li>
-          <li><a href="doc/index.html" style="height: 10vh;">Documentation</a></li>
-        </ul>
-      </div>
-    </nav>
      
   <div class="parallax-container" style="height: 90vh;">
     <div class="parallax"><img src="office.jpg"></div>
