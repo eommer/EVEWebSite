@@ -29,64 +29,64 @@
         $('.scrollspy').scrollSpy();
       }); 
       
-      $(document).ready(function(){
-        $('#navbarTop').css( "opacity", "0.6");
-        $('#top').show();
-        
-      }); 
-      
       $(document).ready(function() {
-        $(window).scroll(function () { 
-
+        $('#navbarTop').hide();
+      });
+      $(document).ready(function() {
+        $(window).scroll(function () {
           console.log($(window).scrollTop());
-
-          if ($(window).scrollTop() > 0) {
-            $('#top').hide();
-           $('#navbarTop').css( "opacity", "1");
+          if ($(window).scrollTop() > 290) {
+           $('#navbarTop').show();
+           $('#navbar1').hide();
           }
-
-          if ($(window).scrollTop() < 1) {
-            $('#top').show();
-            $('#navbarTop').css( "opacity", "0.6");
+          if ($(window).scrollTop() < 291) {
+            $('#navbarTop').hide();
+            $('#navbar1').show();
           }
         });
       });
-      
-    </script>
-    
+  </script>
 </head>
-  
+
 <body>
-  
-  <!--
-      <section class="page-header" id="header" style="height: 25vh;">
-      <h1 class="project-name">Easy Video Edition</h1>
-        <h2 class="project-tagline"></h2>  
-        <a href="https://github.com/clement-chollet/Easy-Video-Edition" class="btn">View on GitHub</a>
-      </section>
-  -->
-       
-  <div class="parallax-container" style="height: 100vh;">
-    <div class="parallax"><img src="office.jpg"></div>
-    
-       <div id="top" class="navbar-fixed light-blue" style="z-index: 10; height: 7vh; opacity: 0.6;">
-        <h2 class="center">Easy Video Edition</h2>
-        <a href="https://github.com/clement-chollet/Easy-Video-Edition" class="btn right">View on GitHub</a>    
-      </div>
-    
-      <div id="navbarTop" class="navbar-fixed" style="height: 7vh;">
+    <div id="navbarTop" class="navbar-fixed">
         <nav>
-          <div class="nav-wrapper light-blue" style="z-index: 10; padding-left:15%;">
+          <div class="nav-wrapper light-blue darken-2" style="z-index: 10; padding-left:15%; height: 7vh;">
             <ul id="nav-mobile" class="left">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="GettingStarted.html" >Getting started</a></li>
-              <li><a href="api.html">APIs</a></li>
-              <li><a href="doc/index.html">Documentation</a></li>              
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="GettingStarted.html">Getting started</a></li>
+              <li><a href="api.html">APIs</a></li>              
+              <li><a href="doc/index.html">Documentation</a></li>
             </ul>
           </div>
         </nav>
     </div>
+
+     <div  style="z-index: 10; position: relative; height: 18vh;">
+      <section id="topPage" class="page-header">
+      <h1 class="project-name">Easy Video Edition</h1>
+      <h2 class="project-tagline"></h2>
+
+        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
+
+      </section>
+     </div>
+
+    <nav id="navbar1">
+      <div class="nav-wrapper light-blue darken-2" style="z-index: 10; padding-left:15%; height: 7vh;">
+        <ul id="nav-mobile" class="left">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="GettingStarted.html">Getting started</a></li>
+          <li><a href="api.html">APIs</a></li>          
+          <li><a href="doc/index.html">Documentation</a></li>
+        </ul>
+      </div>
+</nav>
+       
+  <div class="parallax-container" style="height: 75vh;">
+    <div class="parallax"><img src="office.jpg"></div>  
   </div>
+  
   <div class="section white">
       
     <div class="row container">
