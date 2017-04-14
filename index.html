@@ -30,7 +30,6 @@
       }); 
       
       $(document).ready(function(){
-        $('#navbarTop').removeClass("nav-wrapper light-blue darken-3").addClass("nav-wrapper grey darken-2");
         $('#navbarTop').css( "opacity", "0.5");
         
       }); 
@@ -41,12 +40,10 @@
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 0) {
-           $('#navbarTop').removeClass("nav-wrapper grey darken-2").addClass("nav-wrapper light-blue darken-3");
            $('#navbarTop').css( "opacity", "1");
           }
 
           if ($(window).scrollTop() < 1) {
-            $('#navbarTop').removeClass("nav-wrapper light-blue darken-3").addClass("nav-wrapper grey darken-2");
             $('#navbarTop').css( "opacity", "0.3");
           }
         });
@@ -69,14 +66,14 @@
   <div class="parallax-container" style="height: 90vh;">
     <div class="parallax"><img src="office.jpg"></div>
     
-      <div id="navbarTop" class="navbar-fixed" style="height: 10vh;">
+      <div id="navbarTop" class="navbar-fixed" style="height: 7vh;">
         <nav>
-          <div class="nav-wrapper light-blue darken-3" style="z-index: 10; padding-left:15%; height: 10vh; vertical-align: middle;">
+          <div class="nav-wrapper light-blue accent-3" style="z-index: 10; padding-left:15%;">
             <ul id="nav-mobile" class="left">
-              <li class="active" style="height: 10vh; vertical-align: middle;"><a href="index.html">Home</a></li>
-              <li><a href="GettingStarted.html" style="height: 10vh; vertical-align: middle;">Getting started</a></li>
-              <li><a href="api.html" style="height: 10vh; vertical-align: middle;">APIs</a></li>
-              <li><a href="doc/index.html" style="height: 10vh; vertical-align: middle;">Documentation</a></li>              
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="GettingStarted.html" >Getting started</a></li>
+              <li><a href="api.html">APIs</a></li>
+              <li><a href="doc/index.html">Documentation</a></li>              
             </ul>
           </div>
         </nav>
