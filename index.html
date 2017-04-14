@@ -30,8 +30,8 @@
       }); 
       
       $(document).ready(function(){
-        //$('#navbarTop').css( "backgroundColor", "#0277bd");
-        $('#navbarTop').css( "opacity", "0.3");
+        $('#navbarTop').css( "backgroundColor", "424242");
+        $('#navbarTop').css( "opacity", "0.5");
         
       }); 
       
@@ -41,10 +41,12 @@
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 0) {
+           $('#navbarTop').css( "backgroundColor", "#0277bd");
            $('#navbarTop').css( "opacity", "1");
           }
 
           if ($(window).scrollTop() < 1) {
+            $('#navbarTop').css( "backgroundColor", "424242");
             $('#navbarTop').css( "opacity", "0.3");
           }
         });
@@ -57,7 +59,7 @@
 <body>
     <div id="navbarTop" class="navbar-fixed" style="height: 10vh;">
         <nav>
-          <div class="nav-wrapper cyan lighten-2" style="z-index: 10; padding-left:15%; height: 10vh;">
+          <div class="nav-wrapper" style="z-index: 10; padding-left:15%; height: 10vh;">
             <ul id="nav-mobile" class="left">
               <li class="active" style="height: 10vh; vertical-align: middle;"><a href="index.html">Home</a></li>
               <li><a href="GettingStarted.html" style="height: 10vh; vertical-align: middle;">Getting started</a></li>
