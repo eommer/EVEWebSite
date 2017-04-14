@@ -31,6 +31,7 @@
       
       $(document).ready(function(){
         $('#navbarTop').css( "opacity", "0.6");
+        $('#top').show();
         
       }); 
       
@@ -40,10 +41,12 @@
           console.log($(window).scrollTop());
 
           if ($(window).scrollTop() > 0) {
+            $('#top').hide();
            $('#navbarTop').css( "opacity", "1");
           }
 
           if ($(window).scrollTop() < 1) {
+            $('#top').show();
             $('#navbarTop').css( "opacity", "0.6");
           }
         });
@@ -62,6 +65,11 @@
         <a href="https://github.com/clement-chollet/Easy-Video-Edition" class="btn">View on GitHub</a>
       </section>
   -->
+  
+    
+  <div id="top" class="navbar-fixed light-blue" style="z-index: 10; height: 7vh;">    
+    <a href="https://github.com/clement-chollet/Easy-Video-Edition" class="btn">View on GitHub</a>    
+  </div>
      
   <div class="parallax-container" style="height: 100vh;">
     <div class="parallax"><img src="office.jpg"></div>
