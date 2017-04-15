@@ -12,37 +12,25 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.collapsible').collapsible();
-    });
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-     // Initialize collapse button
-    $(".button-collapse").sideNav();
-    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-    //$('.collapsible').collapsible();  
-    $('.dropdown-button').dropdown({
-        inDuration: 300,
-        outDuration: 225,
-        constrainWidth: false, // Does not change width of dropdown to that of the activator
-        hover: true, // Activate on hover
-        gutter: 0, // Spacing from edge
-        belowOrigin: false, // Displays dropdown below the button
-        alignment: 'left', // Displays dropdown with edge aligned to the left of button
-        stopPropagation: false // Stops event propagation
-      }
-    );
-    
-    $(document).ready(function() {
-        
-        $('#navbarTop').hide();
-        
-      });
+   <script>
       
-      $(document).ready(function() {
-        $(window).scroll(function () { 
+      $(document).ready(function(){
+        $('.collapsible').collapsible();
+        $('.parallax').parallax();
+        $(".button-collapse").sideNav(); 
+        $(".dropdown-button").dropdown();
+        $('.scrollspy').scrollSpy();
+        $('#navbarTop').hide();
+        /*if($(window).width() < 801){
+           $('#menuTop').show();
+           $('#menu1').show();
+        }
+        if($(window).width() > 800){
+           $('#menuTop').hide();
+           $('#menu1').hide();
+        }*/
+        
+        $(window).scroll(function () {
           console.log($(window).scrollTop());
           if ($(window).scrollTop() > 290) {
            $('#navbarTop').show();
@@ -53,44 +41,76 @@
             $('#navbar1').show();
           }
         });
-      });
-    
-    $('#textarea1').val('New Text');
-    $('#textarea1').trigger('autoresize');
         
+        /*$( window ).resize(function() {
+          if($(window).width() < 801){
+           $('#menuTop').show();
+           $('#menu1').show();
+        }
+        if($(window).width() > 800){
+           $('#menuTop').hide();
+           $('#menu1').hide();
+        }
+        });*/
+        
+      }); 
+      
   </script>
 </head>
-  
+
 <body>
-    <div id="navbarTop" class="navbar-fixed">
+
+    <div id="navbarTop" class="navbar-fixed">   
+      
+        <!-- Dropdown Structure -->
+        <ul id="dropdownTop" class="dropdown-content" style="z-index: 10;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="GettingStarted.html">Getting started</a></li>
+            <li><a href="api.html">APIs</a></li>              
+            <li><a href="doc/index.html">Documentation</a></li>
+        </ul>
+      
         <nav>
-          <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%">
+          <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%;">
             <ul id="nav-mobile" class="left">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="GettingStarted.html">Getting started</a></li>
-              <li><a href="api.html">APIs</a></li>              
-              <li><a href="docu/html/classes.html">Documentation</a></li>
+              <li style="width: 200px;"><a id="menuTop" class="dropdown-button hide-on-large-only" href="#!" data-activates="dropdownTop">Menu</a></li> 
+              <li class="active hide-on-med-and-down"><a href="index.html">Home</a></li>
+              <li class="hide-on-med-and-down"><a href="GettingStarted.html">Getting started</a></li>
+              <li class="hide-on-med-and-down"><a href="api.html">APIs</a></li>              
+              <li class="hide-on-med-and-down"><a href="doc/index.html">Documentation</a></li>
             </ul>
           </div>
         </nav>
-      </div>
-    
-     
-      <section class="page-header">
-      <h1 class="project-name">Easy Video Edition</h1>
-        <h2 class="project-tagline"></h2>  
-        <a href="https://github.com/clement-chollet/Easy-Video-Edition" class="btn">View on GitHub</a>
-      </section>
-  
-  <nav id="navbar1">
-    <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%">
-      <ul id="nav-mobile" class="left">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="GettingStarted.html">Getting started</a></li>
-        <li><a href="api.html">APIs</a></li>
-        <li><a href="docu/html/classes.html">Documentation</a></li>
-      </ul>
     </div>
+
+     <div  style="z-index: 10; position: relative;">
+      <section id="topPage" class="page-header" style="height: 30vh;">
+      <h1 class="project-name">Easy Video Edition</h1>
+      <h2 class="project-tagline"></h2>
+
+        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
+
+      </section>
+     </div>
+  
+      <!-- Dropdown Structure -->
+        <ul id="dropdown1" class="dropdown-content" style="z-index: 10;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="GettingStarted.html">Getting started</a></li>
+            <li><a href="api.html">APIs</a></li>              
+            <li><a href="doc/index.html">Documentation</a></li>
+        </ul>
+  
+      <nav id="navbar1">
+      <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%;">
+        <ul id="nav-mobile" class="left">
+              <li style="width: 200px;"><a id="menu1" class="dropdown-button hide-on-large-only" href="#!" data-activates="dropdown1">Menu</a></li> 
+              <li class="active hide-on-med-and-down"><a href="index.html">Home</a></li>
+              <li class="hide-on-med-and-down"><a href="GettingStarted.html">Getting started</a></li>
+              <li class="hide-on-med-and-down"><a href="api.html">APIs</a></li>              
+              <li class="hide-on-med-and-down"><a href="doc/index.html">Documentation</a></li>
+            </ul>
+      </div>
   </nav>
   
   <div class="row container">
