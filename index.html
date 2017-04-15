@@ -32,6 +32,17 @@
       $(document).ready(function() {
         $('#navbarTop').hide();
       });
+      
+      /*$(document).ready(function() {
+        if( $(window).width() > 800{           
+           $('#menuBar').hide();
+         }
+         if( $(window).width() < 801{
+           $('#menuBar').show();
+         }
+           
+      });*/
+      
       $(document).ready(function() {
         $(window).scroll(function () {
           console.log($(window).scrollTop());
@@ -52,19 +63,31 @@
 
     <div id="navbarTop" class="navbar-fixed">
         <nav>
-          <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%">
+          <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%; height: 7vh;">
             <ul id="nav-mobile" class="left">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="GettingStarted.html">Getting started</a></li>
-              <li><a href="api.html">APIs</a></li>              
-              <li><a href="doc/index.html">Documentation</a></li>
+              <li id="menuTop">
+                <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                  <li><a href="#!">one</a></li>
+                  <li><a href="#!">two</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#!">three</a></li>
+                  <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                  <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                </ul>
+              </li>
+              <li class="active hide-on-small-only"><a href="index.html">Home</a></li>
+              <li class="hide-on-small-only"><a href="GettingStarted.html">Getting started</a></li>
+              <li class="hide-on-small-only"><a href="api.html">APIs</a></li>              
+              <li class="hide-on-small-only"><a href="doc/index.html">Documentation</a></li>
             </ul>
           </div>
         </nav>
     </div>
 
      <div  style="z-index: 10; position: relative;">
-      <section id="topPage" class="page-header">
+      <section id="topPage" class="page-header" style="height: 30vh;">
       <h1 class="project-name">Easy Video Edition</h1>
       <h2 class="project-tagline"></h2>
 
@@ -74,17 +97,29 @@
      </div>
 
     <nav id="navbar1">
-      <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%">
+      <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%; height: 7vh;">
         <ul id="nav-mobile" class="left">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="GettingStarted.html">Getting started</a></li>
-          <li><a href="api.html">APIs</a></li>          
-          <li><a href="doc/index.html">Documentation</a></li>
-        </ul>
+              <li id="menu1">
+                <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                  <li><a href="#!">one</a></li>
+                  <li><a href="#!">two</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#!">three</a></li>
+                  <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                  <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                </ul>
+              </li>
+              <li class="active hide-on-small-only"><a href="index.html">Home</a></li>
+              <li class="hide-on-small-only"><a href="GettingStarted.html">Getting started</a></li>
+              <li class="hide-on-small-only"><a href="api.html">APIs</a></li>              
+              <li class="hide-on-small-only"><a href="doc/index.html">Documentation</a></li>
+            </ul>
       </div>
     </nav>
        
-  <div class="parallax-container" style="height: 25vh;">
+  <div class="parallax-container" style="height: 56vh;">
     <div class="parallax"><img src="office.jpg"></div>  
   </div>
   
