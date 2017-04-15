@@ -13,40 +13,18 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
-            
+
+      
       $(document).ready(function(){
         $('.collapsible').collapsible();
-      });
-      $(document).ready(function(){
         $('.parallax').parallax();
-      });
-       // Initialize collapse button
-      $(".button-collapse").sideNav();
-      // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-      //$('.collapsible').collapsible();  
-      $('.dropdown-button').dropdown('open');
-      $('.dropdown-button').dropdown('close');
-      $(document).ready(function(){
+        $(".button-collapse").sideNav(); 
+        $('.dropdown-button').dropdown('open');
+        $('.dropdown-button').dropdown('close');
+        $(".dropdown-button").dropdown();
         $('.scrollspy').scrollSpy();
-      }); 
-      
-      $(".dropdown-button").dropdown();
-      
-      $(document).ready(function() {
         $('#navbarTop').hide();
-      });
-      
-      /*$(document).ready(function() {
-        if( $(window).width() > 800{           
-           $('#menuBar').hide();
-         }
-         if( $(window).width() < 801{
-           $('#menuBar').show();
-         }
-           
-      });*/
-      
-      $(document).ready(function() {
+        
         $(window).scroll(function () {
           console.log($(window).scrollTop());
           if ($(window).scrollTop() > 290) {
@@ -58,7 +36,10 @@
             $('#navbar1').show();
           }
         });
-      });
+        
+      }); 
+      
+
   </script>
 </head>
 
