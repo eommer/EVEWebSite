@@ -32,13 +32,11 @@
         
         $(window).scroll(function () {
           console.log($(window).scrollTop());
-          if ($(window).scrollTop() > 290) {
-           $('#navbarTop').show();
-           $('#navbar1').hide();
+          if ($(window).scrollTop() >1) {
+           $('#navbarTop').css("opacity"; "0.5");
           }
-          if ($(window).scrollTop() < 291) {
-            $('#navbarTop').hide();
-            $('#navbar1').show();
+          if ($(window).scrollTop() < 0) {
+            $('#navbarTop').css("opacity"; "1");
           }
         });
         
@@ -83,6 +81,7 @@
         </nav>
     </div>
 
+  <!--
      <div  style="z-index: 10; position: relative;">
       <section id="topPage" class="page-header" style="height: 30vh;">
       <h1 class="project-name">Easy Video Edition</h1>
@@ -93,7 +92,6 @@
       </section>
      </div>
   
-      <!-- Dropdown Structure -->
         <ul id="dropdown1" class="dropdown-content" style="z-index: 10;">
             <li><a href="index.html">Home</a></li>
             <li><a href="GettingStarted.html">Getting started</a></li>
@@ -112,7 +110,8 @@
             </ul>
       </div>
     </nav>
-       
+  -->     
+  
   <div class="parallax-container" style="height: 66vh;">
     <div class="parallax"><img src="amphi.jpg"></div>  
   </div>
