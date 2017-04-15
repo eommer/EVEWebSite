@@ -35,11 +35,11 @@
       $(document).ready(function() {
         $(window).scroll(function () {
           console.log($(window).scrollTop());
-          if ($(window).scrollTop() > 194) {
+          if ($(window).scrollTop() > 290) {
            $('#navbarTop').show();
            $('#navbar1').hide();
           }
-          if ($(window).scrollTop() < 195) {
+          if ($(window).scrollTop() < 291) {
             $('#navbarTop').hide();
             $('#navbar1').show();
           }
@@ -50,10 +50,10 @@
 
 <body>
 
-     <div id="navbarTop" class="navbar-fixed" style="z-index: 10;">
+    <div id="navbarTop" class="navbar-fixed">
         <nav>
-          <div class="nav-wrapper light-blue darken-4" style="padding-left:15%; height: 7vh;">
-            <ul id="nav-mobile" class="left" >
+          <div class="nav-wrapper cyan darken-3" style="z-index: 10; padding-left:15%">
+            <ul id="nav-mobile" class="left">
               <li><a href="index.html">Home</a></li>
               <li class="active"><a href="GettingStarted.html">Getting started</a></li>
               <li><a href="api.html">APIs</a></li>              
@@ -62,20 +62,19 @@
           </div>
         </nav>
     </div>
-       
-  <div class="parallax-container" style="height: 75vh;">
-    <div class="parallax"><img src="office.jpg"></div>  
-  </div>
-  
-  <div style="z-index: 10; top: 0px; right: 0px; left: 0px; position: absolute">
 
+     <div  style="z-index: 10; position: relative;">
+      <section id="topPage" class="page-header">
+      <h1 class="project-name">Easy Video Edition</h1>
+      <h2 class="project-tagline"></h2>
 
-     <div >
-      <div id="topPage" class="light-blue darken-4" style=" height: 10vh; opacity: 0.5;"></div>
+        <a href="https://github.com/eommer/EVEWebSite" class="btn">View on GitHub</a>
+
+      </section>
      </div>
-    
+
     <nav id="navbar1">
-      <div class="nav-wrapper light-blue darken-4" style="padding-left:15%; height: 7vh;">
+      <div class="nav-wrapper cyan darken-3" style="z-index: 10; padding-left:15%">
         <ul id="nav-mobile" class="left">
           <li><a href="index.html">Home</a></li>
           <li class="active"><a href="GettingStarted.html">Getting started</a></li>
@@ -84,7 +83,9 @@
         </ul>
       </div>
     </nav>
-    
+       
+  <div class="parallax-container" style="height: 20vh;">
+    <div class="parallax"><img src="office.jpg"></div>  
   </div>
   
   <div class="section white">
