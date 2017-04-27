@@ -1,0 +1,106 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen $doxygenversion"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--BEGIN PROJECT_NAME--><title>$projectname: $title</title><!--END PROJECT_NAME-->
+<!--BEGIN !PROJECT_NAME--><title>$title</title><!--END !PROJECT_NAME-->
+<link href="$relpath^tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="$relpath^jquery.js"></script>
+<script type="text/javascript" src="$relpath^dynsections.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/EVEWebSite/assets/css/style.css?v=2d1d5b61b48492947b8b0c0aa3300fef59cc5eb7">
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script>
+      
+  $(document).ready(function(){
+	$('.collapsible').collapsible();
+	$('.parallax').parallax();
+	$(".button-collapse").sideNav(); 
+	$(".dropdown-button").dropdown();
+	$('.scrollspy').scrollSpy();
+	$('#navbarTop').hide();
+	/*if($(window).width() < 801){
+	   $('#menuTop').show();
+	   $('#menu1').show();
+	}
+	if($(window).width() > 800){
+	   $('#menuTop').hide();
+	   $('#menu1').hide();
+	}*/
+	
+	$(window).scroll(function () {
+	  console.log($(window).scrollTop());
+	  if ($(window).scrollTop() > 170) {
+	   $('#navbarTop').show();
+	   $('#navbar1').hide();
+	  }
+	  if ($(window).scrollTop() < 171) {
+		$('#navbarTop').hide();
+		$('#navbar1').show();
+	  }
+	});
+	
+	/*$( window ).resize(function() {
+	  if($(window).width() < 801){
+	   $('#menuTop').show();
+	   $('#menu1').show();
+	}
+	if($(window).width() > 800){
+	   $('#menuTop').hide();
+	   $('#menu1').hide();
+	}
+	});*/
+	
+  }); 
+      
+</script>
+$treeview
+$search
+$mathjax
+<link href="$relpath^$stylesheet" rel="stylesheet" type="text/css" />
+$extrastylesheet
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+
+<!--BEGIN TITLEAREA-->
+<div id="titlearea">
+	<div id="navbarTop" class="navbar-fixed">   
+	  
+		<!-- Dropdown Structure -->
+		<ul id="dropdownTop" class="dropdown-content" style="z-index: 10;">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="GettingStarted.html">Getting started</a></li>
+			<li><a href="api.html">APIs</a></li>              
+			<li><a href="doc/index.html">Documentation</a></li>
+		</ul>
+	  
+		<nav>
+		  <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%;">
+			<ul id="nav-mobile" class="left">
+			  <li style="width: 200px;"><a id="menuTop" class="dropdown-button hide-on-large-only" href="#!" data-activates="dropdownTop">Menu</a></li> 
+			  <li class="hide-on-med-and-down"><a href="index.html">Home</a></li>
+			  <li class="active hide-on-med-and-down"><a href="GettingStarted.html">Getting started</a></li>
+			  <li class="hide-on-med-and-down"><a href="api.html">APIs</a></li>              
+			  <li class="hide-on-med-and-down"><a href="doc/index.html">Documentation</a></li>
+			</ul>
+		  </div>
+		</nav>
+    </div>
+
+     <div  style="z-index: 20; position: relative;">
+      <section id="topPage" class="page-header" style="height: 15vh;">
+        <h1 class="project-name">Easy Video Edition</h1>
+        <h2 class="project-tagline"></h2>
+      </section>
+	</div>
+</div>
+<!--END TITLEAREA-->
+<!-- end header part -->
