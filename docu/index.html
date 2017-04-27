@@ -13,79 +13,34 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script>
-      
-      $(document).ready(function(){
-        $('.collapsible').collapsible();
-        $('.parallax').parallax();
-        $(".button-collapse").sideNav(); 
-        $(".dropdown-button").dropdown();
-        $('.scrollspy').scrollSpy();
-        $('#navbarTop').hide();
-        /*if($(window).width() < 801){
-           $('#menuTop').show();
-           $('#menu1').show();
-        }
-        if($(window).width() > 800){
-           $('#menuTop').hide();
-           $('#menu1').hide();
-        }*/
-        
-        $(window).scroll(function () {
-          console.log($(window).scrollTop());
-          if ($(window).scrollTop() > 170) {
-           $('#navbarTop').show();
-           $('#navbar1').hide();
-          }
-          if ($(window).scrollTop() < 171) {
-            $('#navbarTop').hide();
-            $('#navbar1').show();
-          }
-        });
-        
-        /*$( window ).resize(function() {
-          if($(window).width() < 801){
-           $('#menuTop').show();
-           $('#menu1').show();
-        }
-        if($(window).width() > 800){
-           $('#menuTop').hide();
-           $('#menu1').hide();
-        }
-        });*/
-        
-      }); 
-      
+  <link href="navtree.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="resize.js"></script>
+  <script type="text/javascript" src="navtreedata.js"></script>
+  <script type="text/javascript" src="navtree.js"></script>
+  <script type="text/javascript">
+    $(document).ready(initResizable);
   </script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
-<script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="search/searchdata.js"></script>
+  <script type="text/javascript" src="search/search.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() { init_search(); });
+  </script>
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
-<div id="navbarTop" class="navbar-fixed" style="css/materialize.min.css">   
-      
+  
+  <div id="navbarTop" class="navbar-fixed" style="css/materialize.min.css">   
         <!-- Dropdown Structure -->
         <ul id="dropdownTop" class="dropdown-content" style="z-index: 10;">
             <li><a href="index.html">Home</a></li>
             <li><a href="GettingStarted.html">Getting started</a></li>
             <li><a href="api.html">APIs</a></li>              
             <li><a href="doc/index.html">Documentation</a></li>
-        </ul>
-      
+        </ul>  
         <nav>
           <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%;">
             <ul id="nav-mobile" class="left">
@@ -99,32 +54,6 @@
         </nav>
     </div>
 
-     <div  style="z-index: 10; position: relative;">
-      <section id="topPage" class="page-header" style="height: 15vh;">
-          <h1 class="project-name center" style="top:2vh;">Easy Video Edition</h1>
-      </section>
-       
-     </div>
-  
-      <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content" style="z-index: 10;">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="GettingStarted.html">Getting started</a></li>
-            <li><a href="api.html">APIs</a></li>              
-            <li><a href="doc/index.html">Documentation</a></li>
-        </ul>
-  
-      <nav id="navbar1">
-      <div class="nav-wrapper teal lighten-1" style="z-index: 10; padding-left:15%;">
-        <ul id="nav-mobile" class="left">
-              <li style="width: 200px;"><a id="menu1" class="dropdown-button hide-on-large-only" href="#!" data-activates="dropdown1">Menu</a></li> 
-              <li class="active hide-on-med-and-down"><a href="index.html">Home</a></li>
-              <li class="hide-on-med-and-down"><a href="GettingStarted.html">Getting started</a></li>
-              <li class="hide-on-med-and-down"><a href="api.html">APIs</a></li>              
-              <li class="hide-on-med-and-down"><a href="doc/index.html">Documentation</a></li>
-            </ul>
-      </div>
-    </nav>
 </div>
 </div>
 <!-- end header part -->
