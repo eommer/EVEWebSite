@@ -69,7 +69,7 @@
 [see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
 
 ```cs
-public void exportVideoStart(int width, int height, int frameRate, string outputVideoCodec, string outputAudioCodec, IEnumerator<StoryBoardElement> videoList, String savePath)
+	public void exportVideoStart(int width, int height, int frameRate, string outputVideoCodec, string outputAudioCodec, IEnumerator<StoryBoardElement> videoList, String savePath)
 ```
 
 ```cs
