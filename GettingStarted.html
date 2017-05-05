@@ -204,15 +204,49 @@
           
           <p><strong>Split videos</strong></p>
           
-          <pre><code class="cs language-cs">              // Hello1.cs
-              public class Hello1
-              {
-                 public static void Main()
-                 {
-                    System.Console.WriteLine("Hello, World!");
-                 }
-              }
+          <p>When the video is ready to export, a process will be needed. This one will get every storyBoard elements from the storyBoard and will split some elemens if needed, convert every videos and concat all converted elements in an unique video.
+          
+          <div class="language-cs highlighter-rouge"><pre class="highlight"><code><span class="k">public</span> <span class="k">void</span> <span class="nf">exportVideoStart</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">frameRate</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputVideoCodec</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputAudioCodec</span><span class="p">,</span> <span class="n">IEnumerator</span><span class="p">&lt;</span><span class="n">StoryBoardElement</span><span class="p">&gt;</span> <span class="n">videoList</span><span class="p">,</span> <span class="n">String</span> <span class="n">savePath</span><span class="p">)</span>
           </code></pre>
+          </div>
+          
+          The process behind this function is : 
+          
+          <div class="language-cs highlighter-rouge"><pre class="highlight"><code>	<span class="n">List</span><span class="p">&lt;</span><span class="n">Video</span><span class="p">&gt;</span> <span class="n">videoArray</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Video</span><span class="p">&gt;();</span>
+            <span class="c1">//-------------------------
+              </span>	<span class="c1">//Convertion of the video file 
+              </span>	<span class="k">while</span> <span class="p">(</span><span class="n">videoList</span><span class="p">.</span><span class="nf">MoveNext</span><span class="p">())</span>
+                <span class="p">{</span>
+                    <span class="n">StoryBoardElement</span> <span class="n">ele</span> <span class="p">=</span> <span class="n">videoList</span><span class="p">.</span><span class="n">Current</span><span class="p">;</span>
+                    <span class="n">Video</span> <span class="n">v</span><span class="p">;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">ele</span><span class="p">.</span><span class="n">fileType</span><span class="p">.</span><span class="nf">Equals</span><span class="p">(</span><span class="s">"Video"</span><span class="p">))</span>
+                    <span class="p">{</span>
+                      <span class="cm">/* Split the storyBoard element if it must be */</span>
+                  <span class="k">if</span><span class="p">(</span><span class="n">ele</span><span class="p">.</span><span class="n">hasToBeSplit</span> <span class="p">==</span> <span class="k">true</span><span class="p">)</span>
+                  <span class="p">{</span>
+
+                      <span class="n">v</span> <span class="p">=</span> <span class="nf">splitVideo</span><span class="p">((</span><span class="n">Video</span><span class="p">)</span><span class="n">ele</span><span class="p">.</span><span class="n">file</span><span class="p">,</span> <span class="n">ele</span><span class="p">.</span><span class="n">numPart</span><span class="p">,</span> <span class="n">ele</span><span class="p">.</span><span class="n">startTimeInSource</span><span class="p">,</span> <span class="n">ele</span><span class="p">.</span><span class="n">endTimeInSource</span><span class="p">);</span> <span class="c1">//extract the part from the original video
+              </span>
+                  <span class="p">}</span>
+                  <span class="k">else</span>
+                  <span class="p">{</span>
+                      <span class="n">v</span> <span class="p">=</span> <span class="p">(</span><span class="n">Video</span><span class="p">)</span><span class="n">ele</span><span class="p">.</span><span class="n">file</span><span class="p">;</span>
+                  <span class="p">}</span>
+
+                  <span class="nf">convertVideo</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">frameRate</span><span class="p">,</span> <span class="n">outputVideoCodec</span><span class="p">,</span> <span class="n">outputAudioCodec</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+                  <span class="c1">//update of the path in the file list
+              </span>		<span class="n">ele</span><span class="p">.</span><span class="n">filePath</span> <span class="p">=</span> <span class="n">v</span><span class="p">.</span><span class="n">filePath</span><span class="p">;</span>
+                  <span class="n">_offsetConvertProgress</span> <span class="p">+=</span> <span class="n">v</span><span class="p">.</span><span class="n">duration</span><span class="p">;</span>
+                  <span class="n">videoArray</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="n">videoList</span><span class="p">.</span><span class="nf">Reset</span><span class="p">();</span>
+                <span class="c1">//End of convertion
+              </span>	<span class="c1">//-------------------------
+              </span>
+                <span class="n">Video</span> <span class="n">FINAL</span> <span class="p">=</span> <span class="nf">concatVideoArray</span><span class="p">(</span><span class="n">videoArray</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">frameRate</span><span class="p">,</span> <span class="n">outputVideoCodec</span><span class="p">,</span> <span class="n">savePath</span><span class="p">);</span>
+              </code></pre>
+              </div>
           
         </div>
         
