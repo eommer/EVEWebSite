@@ -143,7 +143,7 @@
       <h4> Code examples </h4>
 
       <div id="exConv"  class="section scrollspy">
-      <p><strong>videoConverter usage</strong></p>
+      <p><b>videoConverter usage</b></p>
 
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
           <span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
@@ -157,32 +157,36 @@
         </code></pre>
         </div>
         
-        <p>Options for the conversion of the concatenation that can be change : </p>
+        <p>
+          
+          Options for the conversion of the concatenation that can be change :
+        
+        </p>
         
         <div class="row">
-          <div class="col s4"><b>Name</b></div>
-          <div class="col s4"><b>Utility</b></div>
-          <div class="col s4"><b>Possible values</b></div>
+          <div class="col s4z-depth-3"><b>Name</b></div>
+          <div class="col s4z-depth-3"><b>Utility</b></div>
+          <div class="col s4 z-depth-3"><b>Possible values</b></div>
         </div>
         <div class="row">
-          <div class="col s4">Width</div>
-          <div class="col s4">Width of the converted video</div>
-          <div class="col s4">any (1280 or 1920 recommanded)</div>
+          <div class="col s4 z-depth-3">Width</div>
+          <div class="col s4 z-depth-3">Width of the converted video</div>
+          <div class="col s4 z-depth-3">any (1280 or 1920 recommanded)</div>
         </div>
         <div class="row">
-          <div class="col s4">height</div>
-          <div class="col s4">height of the converted video</div>
-          <div class="col s4">any (720 or 1080 recommanded)</div>
+          <div class="col s4 z-depth-3">Height</div>
+          <div class="col s4 z-depth-3">Height of the converted video</div>
+          <div class="col s4 z-depth-3">any (720 or 1080 recommanded)</div>
         </div>
         <div class="row">
-          <div class="col s4">Framerate</div>
-          <div class="col s4">number of frames per second</div>
-          <div class="col s4">any (24, 30 or 60 recommended)</div>
+          <div class="col s4 z-depth-3">Framerate</div>
+          <div class="col s4 z-depth-3">number of frames per second</div>
+          <div class="col s4 z-depth-3">any (24, 30 or 60 recommended)</div>
         </div>
         <div class="row">
-          <div class="col s4">Video codec</div>
-          <div class="col s4">codec which the video will be encoded</div>
-          <div class="col s4">check bellow</div>
+          <div class="col s4 z-depth-3">Video codec</div>
+          <div class="col s4 z-depth-3">codec which the video will be encoded</div>
+          <div class="col s4 z-depth-3">check bellow</div>
         </div>
         <div class="row">
           <div class="col s4">Audio codec</div>
@@ -190,22 +194,26 @@
           <div class="col s4">ac3, aac, wma, amr</div>
         </div>
         
-        <p>video codecs : </p>
+        <p>
+          
+          Video codecs : 
+        
+        </p>
         
         <div class="row">
-          <div class="col s4"><b>Codec</b></div>
-          <div class="col s4"><b>Advantages</b></div>
-          <div class="col s4"><b>Drawbacks</b></div>
+          <div class="col s4 z-depth-3"><b>Codec</b></div>
+          <div class="col s4 z-depth-3"><b>Advantages</b></div>
+          <div class="col s4 z-depth-3"><b>Drawbacks</b></div>
         </div>
         <div class="row">
-          <div class="col s4">h264</b></div>
-          <div class="col s4">High definition</b></div>
-          <div class="col s4">Important timing process</b></div>
+          <div class="col s4 z-depth-3">h264</div>
+          <div class="col s4 z-depth-3">High definition</div>
+          <div class="col s4 z-depth-3">Important timing process</div>
         </div>
         <div class="row">
-          <div class="col s4">mpeg</div>
-          <div class="col s4">Low quality</div>
-          <div class="col s4">Fast timing process</div>
+          <div class="col s4 z-depth-3">mpeg</div>
+          <div class="col s4 z-depth-3">Low quality</div>
+          <div class="col s4 z-depth-3">Fast timing process</div>
         </div>
         
         <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
@@ -214,9 +222,13 @@
 
       <div id="exSub" class="section scrollspy">
 
-        <p><strong>subtitles usage</strong></p>
+        <p><b>subtitles usage</b></p>
         
-        <p>The poject use srt format for subtitle. Subtitles can be load from an existing file if wanted, and other can be added and save to a srt file.</p>
+        <p>
+          
+          The poject use srt format for subtitle. Subtitles can be load from an existing file if wanted, and other can be added and save to a srt file.
+        
+        </p>
 
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
           <span class="n">Subtitles</span> <span class="n">subs</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Subtitles</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">filePath</span><span class="p">);</span>
@@ -237,9 +249,13 @@
 
       <div id="exVid" class="section scrollspy">
 
-        <p><strong>Video usage</strong></p>
+        <p><b>Video usage</b></p>
 
-        <p>Some functions can be applied to videos mainly to get informations about them.</p>
+        <p>
+          
+          Some functions can be applied to videos mainly to get informations about them.
+        
+        </p>
         
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
           <span class="c1">//get the extention, the directory and the name of the video
@@ -257,9 +273,11 @@
 
         <div id="exSplit" class="section scrollspy">
           
-          <p><strong>Split videos</strong></p>
+          <p><b>Split videos</b></p>
           
-          <p>When the video is ready to export, a process will be needed. This one will get every storyBoard elements from the storyBoard and will split some elemens if needed, convert every videos and concat all converted elements in an unique video.</p>
+          <p>
+            When the video is ready to export, a process will be needed. This one will get every storyBoard elements from the storyBoard and will split some elemens if needed, convert every videos and concat all converted elements in an unique video.
+          </p>
           
           <div class="language-cs highlighter-rouge"><pre class="highlight"><code>	<span class="k">public</span> <span class="k">void</span> <span class="nf">exportVideoStart</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">frameRate</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputVideoCodec</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputAudioCodec</span><span class="p">,</span> <span class="n">IEnumerator</span><span class="p">&lt;</span><span class="n">StoryBoardElement</span><span class="p">&gt;</span> <span class="n">videoList</span><span class="p">,</span> <span class="n">String</span> <span class="n">savePath</span><span class="p">)</span>
           </code></pre>
