@@ -164,6 +164,8 @@
       <div id="exSub" class="section scrollspy">
 
         <p><strong>subtitles usage</strong></p>
+        
+        <p>The poject use srt format for subtitle. Subtitles can be load from an existing file if wanted, and other can be added and save to a srt file.</p>
 
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
           <span class="n">Subtitles</span> <span class="n">subs</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Subtitles</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">filePath</span><span class="p">);</span>
@@ -204,9 +206,9 @@
           
           <p><strong>Split videos</strong></p>
           
-          <p>When the video is ready to export, a process will be needed. This one will get every storyBoard elements from the storyBoard and will split some elemens if needed, convert every videos and concat all converted elements in an unique video.
+          <p>When the video is ready to export, a process will be needed. This one will get every storyBoard elements from the storyBoard and will split some elemens if needed, convert every videos and concat all converted elements in an unique video.</p>
           
-          <div class="language-cs highlighter-rouge"><pre class="highlight"><code><span class="k">public</span> <span class="k">void</span> <span class="nf">exportVideoStart</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">frameRate</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputVideoCodec</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputAudioCodec</span><span class="p">,</span> <span class="n">IEnumerator</span><span class="p">&lt;</span><span class="n">StoryBoardElement</span><span class="p">&gt;</span> <span class="n">videoList</span><span class="p">,</span> <span class="n">String</span> <span class="n">savePath</span><span class="p">)</span>
+          <div class="language-cs highlighter-rouge"><pre class="highlight"><code>	<span class="k">public</span> <span class="k">void</span> <span class="nf">exportVideoStart</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">frameRate</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputVideoCodec</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputAudioCodec</span><span class="p">,</span> <span class="n">IEnumerator</span><span class="p">&lt;</span><span class="n">StoryBoardElement</span><span class="p">&gt;</span> <span class="n">videoList</span><span class="p">,</span> <span class="n">String</span> <span class="n">savePath</span><span class="p">)</span>
           </code></pre>
           </div>
           
