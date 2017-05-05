@@ -67,3 +67,15 @@
 ```
 
 [see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
+
+```cs
+              // Hello1.cs
+              public class Hello1
+              {
+                 public static void Main()
+                 {
+                    System.Console.WriteLine("Hello, World!");
+                 }
+              }
+```
+
