@@ -69,13 +69,45 @@
 [see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
 
 ```cs
-              // Hello1.cs
-              public class Hello1
-              {
-                 public static void Main()
-                 {
-                    System.Console.WriteLine("Hello, World!");
-                 }
-              }
+public void exportVideoStart(int width, int height, int frameRate, string outputVideoCodec, string outputAudioCodec, IEnumerator<StoryBoardElement> videoList, String savePath)
 ```
+
+```cs
+	List<Video> videoArray = new List<Video>();
+	//-------------------------
+	//Convertion of the video file 
+	while (videoList.MoveNext())
+	{
+	    StoryBoardElement ele = videoList.Current;
+	    Video v;
+	    if (ele.fileType.Equals("Video"))
+	    {
+	    	/* Split the storyBoard element if it must be */
+		if(ele.hasToBeSplit == true)
+		{
+			
+		    v = splitVideo((Video)ele.file, ele.numPart, ele.startTimeInSource, ele.endTimeInSource); //extract the part from the original video
+
+		}
+		else
+		{
+		    v = (Video)ele.file;
+		}
+
+		convertVideo(width, height, frameRate, outputVideoCodec, outputAudioCodec, v);
+		//update of the path in the file list
+		ele.filePath = v.filePath;
+		_offsetConvertProgress += v.duration;
+		videoArray.Add(v);
+	    }
+	}
+	videoList.Reset();
+	//End of convertion
+	//-------------------------
+
+	Video FINAL = concatVideoArray(videoArray, width, height, frameRate, outputVideoCodec, savePath);
+```
+
+
+
 
