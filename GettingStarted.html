@@ -156,7 +156,58 @@
         </span>	<span class="n">Video</span> <span class="n">vid3</span> <span class="p">=</span> <span class="n">VideoConverter</span><span class="p">.</span><span class="nf">concatTwoVideos</span><span class="p">(</span><span class="n">vid1</span><span class="p">,</span> <span class="n">vid2</span><span class="p">);</span>
         </code></pre>
         </div>
-
+        
+        <p>Options for the conversion of the concatenation that can be change : </p>
+        
+        <div class="row">
+          <div class="col s4"><b>Name</b></div>
+          <div class="col s4"><b>Utility</b></div>
+          <div class="col s4"><b>Possible values</b></div>
+        </div>
+        <div class="row">
+          <div class="col s4">Width</div>
+          <div class="col s4">Width of the converted video</div>
+          <div class="col s4">any (1280 or 1920 recommanded)</div>
+        </div>
+        <div class="row">
+          <div class="col s4">height</div>
+          <div class="col s4">height of the converted video</div>
+          <div class="col s4">any (720 or 1080 recommanded)</div>
+        </div>
+        <div class="row">
+          <div class="col s4">Framerate</div>
+          <div class="col s4">number of frames per second</div>
+          <div class="col s4">any (24, 30 or 60 recommended)</div>
+        </div>
+        <div class="row">
+          <div class="col s4">Video codec</div>
+          <div class="col s4">codec which the video will be encoded</div>
+          <div class="col s4">check bellow</div>
+        </div>
+        <div class="row">
+          <div class="col s4">Audio codec</div>
+          <div class="col s4">codec which the audio will be encoded</div>
+          <div class="col s4">ac3, aac, wma, amr</div>
+        </div>
+        
+        <p>video codecs : </p>
+        
+        <div class="row">
+          <div class="col s4"><b>Codec</b></div>
+          <div class="col s4"><b>Advantages</b></div>
+          <div class="col s4"><b>Drawbacks</b></div>
+        </div>
+        <div class="row">
+          <div class="col s4">h264</b></div>
+          <div class="col s4">High definition</b></div>
+          <div class="col s4">Important timing process</b></div>
+        </div>
+        <div class="row">
+          <div class="col s4">mpeg</div>
+          <div class="col s4">Low quality</div>
+          <div class="col s4">Fast timing process</div>
+        </div>
+        
         <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
 
       </div>
@@ -188,6 +239,8 @@
 
         <p><strong>Video usage</strong></p>
 
+        <p>Some functions can be applied to videos mainly to get informations about them.</p>
+        
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
           <span class="c1">//get the extention, the directory and the name of the video
         </span>	<span class="n">vid1</span><span class="p">.</span><span class="nf">getExtension</span><span class="p">();</span>
@@ -198,7 +251,7 @@
           <span class="c1">//show the size of the video with the appropriate unit
         </span>	<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="nf">calcSize</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">size</span><span class="p">));</span>
         </code></pre>
-        </div>
+        </div>     
 
         <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
 
