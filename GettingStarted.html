@@ -140,16 +140,16 @@
 
         <ol>
           <li><a href="https://www.visualstudio.com/fr/downloads/?rr=https%3A%2F%2Fwww.google.fr%2F">Download</a> and install Visual Studio</li>
-          <li>Clone the repisotory of the github</li>
+          <li>Clone the github repository</li>
           <li>Open EasyVideoEdition.sln with Visual Studio</li>
         </ol>
       </div>
 
     <div id="examples" style="padding: 10px;">
-      <h4> Code examples </h4>
+      <h4> Code snippets </h4>
 
       <div id="exConv"  class="section scrollspy">
-      <p><b>videoConverter usage</b></p>
+      <p><b>videoConverter use</b></p>
 
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
           <span class="n">Video</span> <span class="n">vid2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name2.avi"</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="m">10000</span><span class="p">);</span>
@@ -165,7 +165,7 @@
         
         <p>
           
-          Options for the conversion or the concatenation that can be change :
+          Options for the conversion or the concatenation that can be changed :
         
         </p>
         
@@ -192,12 +192,12 @@
           </div>
           <div class="row">
             <div class="col s4">Video codec</div>
-            <div class="col s4">codec which the video will be encoded</div>
+            <div class="col s4">codec in which the video will be encoded</div>
             <div class="col s4">check bellow</div>
           </div>
           <div class="row">
             <div class="col s4">Audio codec</div>
-            <div class="col s4">codec which the audio will be encoded</div>
+            <div class="col s4">codec in which the audio will be encoded</div>
             <div class="col s4">ac3, aac, wma, amr</div>
           </div>
         </div>
@@ -237,27 +237,26 @@
         
         <p>
           
-          The project use srt format for subtitle. Subtitles can be load from an existing file if wanted, and other can be added and save to a srt file.
+          The project uses srt format for subtitles. They can be loaded from an existing file if it exists and others can be added and saved in an srt file.
         
         </p>
 
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
           <span class="n">Subtitles</span> <span class="n">subs</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Subtitles</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">filePath</span><span class="p">);</span>
-          <span class="c1">//Read the srt file if it already exists one and add subtitles to the list
+          <span class="c1">//Reads the srt file if it already exists and adds subtitles to the list
         </span>	<span class="n">subs</span><span class="p">.</span><span class="nf">readSrtFile</span><span class="p">();</span>
-          <span class="c1">//add a subtitle to the already existing list
+          <span class="c1">//adds a subtitle to the existing list
         </span>	<span class="n">subs</span><span class="p">.</span><span class="nf">addSubtitle</span><span class="p">(</span><span class="s">"00:00:03,000"</span><span class="p">,</span> <span class="s">"00:00:07,000"</span><span class="p">,</span> <span class="s">"this is a subtitle example"</span><span class="p">);</span>
-          <span class="c1">//edit the first subtitle of the list
+          <span class="c1">//edits the first subtitle of the list
         </span>	<span class="n">subs</span><span class="p">.</span><span class="nf">editSubtitle</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">"00:00:03,000"</span><span class="p">,</span> <span class="s">"00:00:07,000"</span><span class="p">,</span> <span class="s">"this is another subtitle example"</span><span class="p">);</span>
-          <span class="c1">//update or create the srt file
+          <span class="c1">//updates or creates the srt file
         </span>	<span class="n">subs</span><span class="p">.</span><span class="nf">createSrtFile</span><span class="p">();</span>
         </code></pre>
         </div>
         
         <p>
-          Le logiciel permet de lier un fichier sous-titre(.srt) à une quelquonce vidéo.
-          Pour cela il faut utiliser une commande ffmpeg permettant de créer un nouveau fichier vidéo au format mkv. 
-          Celui-ci intégrant alors le contenu de votre fichier srt
+          The software allows to link an srt file to any video.
+          In order to do that a ffmpeg command is required to create a new mkv video file which then includes the srt file content
         </p>
         
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="cm">/* Initializing the process */</span>
@@ -276,12 +275,12 @@
               <i class="col s2 medium material-icons orange-text text-ligthen-1" style="text-align: center;">report_problem</i>
               <div class="col s10">
                 <span>
-                 Attention au au choix du lecteur vidéo, en effet de nombreux lecteur vidéo ne lisent pas les fichiers au format mkv
+                 Mind the video player, indeed many video player don't read mkv files.
                 </span>
               </div>
          </div>
 
-        <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">see documentation</a></p>
+        <p><a href="/EVEWebSite/doc/class_easy_video_edition_1_1_model_1_1_file_browser.html">See documentation</a></p>
 
       </div>
 
@@ -291,18 +290,18 @@
 
         <p>
           
-          Some functions can be applied to videos mainly to get informations about them.
+          Some functions are meant to collect informations about the video.
         
         </p>
         
         <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="n">Video</span> <span class="n">vid1</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Video</span><span class="p">(</span><span class="s">@"C:/Program/name1.avi"</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="m">20000</span><span class="p">);</span>
-          <span class="c1">//get the extention, the directory and the name of the video
+          <span class="c1">//gets the extention, the directory and the name of the video
         </span>	<span class="n">vid1</span><span class="p">.</span><span class="nf">getExtension</span><span class="p">();</span>
           <span class="n">vid1</span><span class="p">.</span><span class="nf">getFileName</span><span class="p">();</span>
           <span class="n">vid1</span><span class="p">.</span><span class="nf">getDirectory</span><span class="p">();</span>
-          <span class="c1">//show the duration of the video with appropriate unit
+          <span class="c1">//shows the duration of the video with the appropriate unit
         </span>	<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="nf">calDuration</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">duration</span><span class="p">));</span>
-          <span class="c1">//show the size of the video with the appropriate unit
+          <span class="c1">//shows the size of the video with the appropriate unit
         </span>	<span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="nf">calcSize</span><span class="p">(</span><span class="n">vid1</span><span class="p">.</span><span class="n">size</span><span class="p">));</span>
         </code></pre>
         </div>     
@@ -315,7 +314,7 @@
           <p><b>Export video</b></p>
           
           <p>
-            When the video is ready to export, a process will be needed. This one will get every storyBoard elements from the storyBoard and will split some elemens if needed, convert every videos and concat all converted elements in an unique video.
+            In order to export a video, a process is needed. It will get every elements from the storyBoard and split some some of them if needed. Then it'll convert every videos and merge all converted elements in an unique video.
           </p>
           
           <div class="language-cs highlighter-rouge"><pre class="highlight"><code>	<span class="k">public</span> <span class="k">void</span> <span class="nf">exportVideoStart</span><span class="p">(</span><span class="kt">int</span> <span class="n">width</span><span class="p">,</span> <span class="kt">int</span> <span class="n">height</span><span class="p">,</span> <span class="kt">int</span> <span class="n">frameRate</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputVideoCodec</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outputAudioCodec</span><span class="p">,</span> <span class="n">IEnumerator</span><span class="p">&lt;</span><span class="n">StoryBoardElement</span><span class="p">&gt;</span> <span class="n">videoList</span><span class="p">,</span> <span class="n">String</span> <span class="n">savePath</span><span class="p">)</span>
@@ -333,7 +332,7 @@
                     <span class="n">Video</span> <span class="n">v</span><span class="p">;</span>
                     <span class="k">if</span> <span class="p">(</span><span class="n">ele</span><span class="p">.</span><span class="n">fileType</span><span class="p">.</span><span class="nf">Equals</span><span class="p">(</span><span class="s">"Video"</span><span class="p">))</span>
                     <span class="p">{</span>
-                      <span class="cm">/* Split the storyBoard element if it must be */</span>
+                      <span class="cm">/* Splits the storyBoard element if necessary */</span>
                   <span class="k">if</span><span class="p">(</span><span class="n">ele</span><span class="p">.</span><span class="n">hasToBeSplit</span> <span class="p">==</span> <span class="k">true</span><span class="p">)</span>
                   <span class="p">{</span>
 
@@ -364,8 +363,8 @@
               <i class="col s2 medium material-icons orange-text text-ligthen-1" style="text-align: center;">report_problem</i>
               <div class="col s10">
                 <span>
-                  Even if insert a video into another one isn't implemented in the interface, it has been coded and is functionnal.
-                  You can use the functions given below to split a storyboard element. The export process is already looking to splittable videos and split them if necessary.
+                  Even if inserting a video into another isn't implemented yet in the interface, it has been coded and is functionnal.
+                  You can use the functions given below to split a storyboard element. The export process checks if videos need to be split and does so as needed
                 </span>
               </div>
             </div>
