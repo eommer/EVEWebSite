@@ -185,15 +185,15 @@ span {
 </style>
 
 
-Video vid1 = new Video(@"C:/Program/name1.avi", name1, 20000);
-Video vid2 = new Video(@"C:/Program/name2.avi", name2, 10000);
-//Convert video
-VideoConverter.convertVideo(1920, 1080, 30, "h264", "ac3", vid1);
-VideoConverter.convertVideo(1920, 1080, 30, "h264", "ac3", vid2);
-//split video
-Video vid1Part1 = VideoConverter.splitVideo(vid1, 1, "00", "00", "00", "00", "00", "18");
-//concatenate videos
-Video vid3 = VideoConverter.concatTwoVideos(vid1, vid2);
+	<div style="float: left; white-space: pre; line-height: 1; background: #FFFFFF; "><span class="sc11">Video</span><span class="sc0"> </span><span class="sc11">vid1</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">new</span><span class="sc0"> </span><span class="sc11">Video</span><span class="sc10">(</span><span class="sc13">@"C:/Program/name1.avi"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">name1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">20000</span><span class="sc10">);</span><span class="sc0">
+	</span><span class="sc11">Video</span><span class="sc0"> </span><span class="sc11">vid2</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc5">new</span><span class="sc0"> </span><span class="sc11">Video</span><span class="sc10">(</span><span class="sc13">@"C:/Program/name2.avi"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">name2</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">10000</span><span class="sc10">);</span><span class="sc0">
+	</span><span class="sc2">//Convert video
+	</span><span class="sc11">VideoConverter</span><span class="sc10">.</span><span class="sc11">convertVideo</span><span class="sc10">(</span><span class="sc4">1920</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1080</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">30</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"h264"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"ac3"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">vid1</span><span class="sc10">);</span><span class="sc0">
+	</span><span class="sc11">VideoConverter</span><span class="sc10">.</span><span class="sc11">convertVideo</span><span class="sc10">(</span><span class="sc4">1920</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1080</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">30</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"h264"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"ac3"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">vid2</span><span class="sc10">);</span><span class="sc0">
+	</span><span class="sc2">//split video
+	</span><span class="sc11">Video</span><span class="sc0"> </span><span class="sc11">vid1Part1</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">VideoConverter</span><span class="sc10">.</span><span class="sc11">splitVideo</span><span class="sc10">(</span><span class="sc11">vid1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc4">1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"00"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"00"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"00"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"00"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"00"</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc6">"18"</span><span class="sc10">);</span><span class="sc0">
+	</span><span class="sc2">//concatenate videos
+	</span><span class="sc11">Video</span><span class="sc0"> </span><span class="sc11">vid3</span><span class="sc0"> </span><span class="sc10">=</span><span class="sc0"> </span><span class="sc11">VideoConverter</span><span class="sc10">.</span><span class="sc11">concatTwoVideos</span><span class="sc10">(</span><span class="sc11">vid1</span><span class="sc10">,</span><span class="sc0"> </span><span class="sc11">vid2</span><span class="sc10">);</span></div>
         
         <p>
           
