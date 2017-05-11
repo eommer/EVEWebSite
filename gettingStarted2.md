@@ -48,6 +48,18 @@
 	subs.createSrtFile();
 ```
 
+```c#
+	/* Initializing the process */
+            Process process = new Process();
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.RedirectStandardError = true;
+            process.StartInfo.FileName = "ffmpeg";
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.CreateNoWindow = true;
+            
+            process.StartInfo.Arguments = "-i " + pathVideo + " -i " + pathsrt + " -map 0 -map 1 -c copy output.mkv";
+```
+
 [see documentation](doc/class_easy_video_edition_1_1_model_1_1_file_browser.html)
 
 ***
