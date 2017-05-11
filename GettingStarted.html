@@ -260,6 +260,18 @@
           Celui-ci intégrant alors le contenu de votre fichier srt
         </p>
         
+        <div class="language-c# highlighter-rouge"><pre class="highlight"><code>	<span class="cm">/* Initializing the process */</span>
+            <span class="n">Process</span> <span class="n">process</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Process</span><span class="p">();</span>
+            <span class="n">process</span><span class="p">.</span><span class="n">StartInfo</span><span class="p">.</span><span class="n">RedirectStandardOutput</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="n">process</span><span class="p">.</span><span class="n">StartInfo</span><span class="p">.</span><span class="n">RedirectStandardError</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="n">process</span><span class="p">.</span><span class="n">StartInfo</span><span class="p">.</span><span class="n">FileName</span> <span class="p">=</span> <span class="s">"ffmpeg"</span><span class="p">;</span>
+            <span class="n">process</span><span class="p">.</span><span class="n">StartInfo</span><span class="p">.</span><span class="n">UseShellExecute</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+            <span class="n">process</span><span class="p">.</span><span class="n">StartInfo</span><span class="p">.</span><span class="n">CreateNoWindow</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            
+            <span class="n">process</span><span class="p">.</span><span class="n">StartInfo</span><span class="p">.</span><span class="n">Arguments</span> <span class="p">=</span> <span class="s">"-i "</span> <span class="p">+</span> <span class="n">pathVideo</span> <span class="p">+</span> <span class="s">" -i "</span> <span class="p">+</span> <span class="n">pathsrt</span> <span class="p">+</span> <span class="s">" -map 0 -map 1 -c copy output.mkv"</span><span class="p">;</span>
+            </code></pre>
+        </div>
+        
          <div class="row grey lighten-5 card-panel">
               <i class="col s2 medium material-icons orange-text text-ligthen-1" style="text-align: center;">report_problem</i>
               <div class="col s10">
