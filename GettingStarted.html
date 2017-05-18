@@ -124,6 +124,7 @@
                 <li><a href="#exVid" class="grey-text text-darken-4"  style="margin-left: 15px;margin-right: 15px;"><div>Video</div></a></li>
                 <li><a href="#exExpo" class="grey-text text-darken-4"  style="margin-left: 15px;margin-right: 15px;"><div>Export video</div></a></li>
 		<li><a href="#exDSlider" class="grey-text text-darken-4"  style="margin-left: 15px;margin-right: 15px;"><div>Double Slider</div></a></li>
+		<li><a href="#exCCompo" class="grey-text text-darken-4"  style="margin-left: 15px;margin-right: 15px;"><div>Custom components</div></a></li>
               <li><a href="#features" class="grey-text text-darken-4" >Features implementation</a></li>
               <li><a href="#files" class="grey-text text-darken-4" >Useful files</a></li>
             </ul>
@@ -526,6 +527,22 @@
 </code></pre>
 </div>
 	     </div>
+	    
+	    <div id="exDSlider" class="section scrollspy">
+		    <p>Component custumization was a big part of the interface design process. To do this in an organized way, ResourceDictionnaries were used. The following code was added to the App.xaml file : </p>
+		    <div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;Application.Resources&gt;</span>
+        <span class="nt">&lt;ResourceDictionary&gt;</span>
+            <span class="nt">&lt;ResourceDictionary.MergedDictionaries&gt;</span>
+                <span class="nt">&lt;ResourceDictionary</span> <span class="na">Source=</span><span class="s">"Dictionnary/Instructions/InstructionsButtonShown.xaml"</span><span class="nt">/&gt;</span>
+		<span class="nt">&lt;ResourceDictionary</span> <span class="na">Source=</span><span class="s">"Dictionnary/Instructions/InstructionsButtonHidden.xaml"</span><span class="nt">/&gt;</span>
+				[...]
+            <span class="nt">&lt;/ResourceDictionary.MergedDictionaries&gt;</span>
+        <span class="nt">&lt;/ResourceDictionary&gt;</span>
+<span class="nt">&lt;/Application.Resources&gt;</span>
+</code></pre>
+</div>
+		    
+	    </div>
 	    
         </div>
       
