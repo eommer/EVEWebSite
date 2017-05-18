@@ -378,7 +378,7 @@
 		  <p><b>Double Slider</b></p>
 
 		  <p>
-		    In order to delimit a section of the video to be cut or otherwise edited, a slider with two thumbs was needed. The solution found to achieve this was a user control to create a new template.
+		    In order to delimit a section of the video to be cut or otherwise edited, a slider with two thumbs was needed. The solution found to achieve this was a user control to create a new template. The following describes the appearance of this user control.
 		  </p>
 		    <div class="language-xml highlighter-rouge"><pre class="highlight"><code>	<span class="nt">&lt;UserControl.Resources&gt;</span>
 			<span class="nt">&lt;ControlTemplate</span> <span class="na">x:Key=</span><span class="s">"simpleSlider"</span> <span class="na">TargetType=</span><span class="s">"{x:Type Slider}"</span><span class="nt">&gt;</span>
@@ -435,7 +435,96 @@
 		    <span class="nt">&lt;/Grid&gt;</span>
 		</code></pre>
 		</div>
+		<p>
+			Then, in order to access the positions of the two thumbs, functions had to be implemented in the .cs of the userControl. 
+		</p>
+		    <div class="language-cs highlighter-rouge"><pre class="highlight"><code>    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">DoubleSlider</span> <span class="p">:</span> <span class="n">UserControl</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">DoubleSlider</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">InitializeComponent</span><span class="p">();</span>
 
+            <span class="k">this</span><span class="p">.</span><span class="n">Loaded</span> <span class="p">+=</span> <span class="n">Slider_Loaded</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">void</span> <span class="nf">Slider_Loaded</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedEventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">LowerSlider</span><span class="p">.</span><span class="n">ValueChanged</span> <span class="p">+=</span> <span class="n">LowerSlider_ValueChanged</span><span class="p">;</span>
+            <span class="n">UpperSlider</span><span class="p">.</span><span class="n">ValueChanged</span> <span class="p">+=</span> <span class="n">UpperSlider_ValueChanged</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// Updates value of the right thumb to both sliders composing the doubleSlider
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="c1">/// &lt;param name="sender"&gt;&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="e"&gt;&lt;/param&gt;
+</span>        <span class="k">private</span> <span class="k">void</span> <span class="nf">LowerSlider_ValueChanged</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedPropertyChangedEventArgs</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">UpperSlider</span><span class="p">.</span><span class="n">Value</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="nf">Max</span><span class="p">(</span><span class="n">UpperSlider</span><span class="p">.</span><span class="n">Value</span><span class="p">,</span> <span class="n">LowerSlider</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// Updates value of the left thumb to both sliders composing the doubleSlider
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="c1">/// &lt;param name="sender"&gt;&lt;/param&gt;
+</span>        <span class="c1">/// &lt;param name="e"&gt;&lt;/param&gt;
+</span>        <span class="k">private</span> <span class="k">void</span> <span class="nf">UpperSlider_ValueChanged</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RoutedPropertyChangedEventArgs</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">LowerSlider</span><span class="p">.</span><span class="n">Value</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="nf">Min</span><span class="p">(</span><span class="n">UpperSlider</span><span class="p">.</span><span class="n">Value</span><span class="p">,</span> <span class="n">LowerSlider</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// Minimum is the lowest value the left thumb can have
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="k">public</span> <span class="kt">double</span> <span class="n">Minimum</span>
+        <span class="p">{</span>
+            <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">GetValue</span><span class="p">(</span><span class="n">MinimumProperty</span><span class="p">);</span> <span class="p">}</span>
+            <span class="k">set</span> <span class="p">{</span> <span class="nf">SetValue</span><span class="p">(</span><span class="n">MinimumProperty</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span> <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">DependencyProperty</span> <span class="n">MinimumProperty</span> <span class="p">=</span>
+            <span class="n">DependencyProperty</span><span class="p">.</span><span class="nf">Register</span><span class="p">(</span><span class="s">"Minimum"</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="kt">double</span><span class="p">),</span> <span class="k">typeof</span><span class="p">(</span><span class="n">DoubleSlider</span><span class="p">),</span> <span class="k">new</span> <span class="nf">UIPropertyMetadata</span><span class="p">(</span><span class="m">0d</span><span class="p">));</span>
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// LowerValue is the value of the left thumb, between Minimum and Maximum (defined in other functions)
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="k">public</span> <span class="kt">double</span> <span class="n">LowerValue</span>
+        <span class="p">{</span>
+            <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">GetValue</span><span class="p">(</span><span class="n">LowerValueProperty</span><span class="p">);</span> <span class="p">}</span>
+            <span class="k">set</span> <span class="p">{</span> <span class="nf">SetValue</span><span class="p">(</span><span class="n">LowerValueProperty</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span> <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">DependencyProperty</span> <span class="n">LowerValueProperty</span> <span class="p">=</span>
+            <span class="n">DependencyProperty</span><span class="p">.</span><span class="nf">Register</span><span class="p">(</span><span class="s">"LowerValue"</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="kt">double</span><span class="p">),</span> <span class="k">typeof</span><span class="p">(</span><span class="n">DoubleSlider</span><span class="p">),</span> <span class="k">new</span> <span class="nf">UIPropertyMetadata</span><span class="p">(</span><span class="m">0d</span><span class="p">));</span>
+
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// UpperValue is the value of the right thumb, between Minimum and Maximum (defined in other functions)
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="k">public</span> <span class="kt">double</span> <span class="n">UpperValue</span>
+        <span class="p">{</span>
+            <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">GetValue</span><span class="p">(</span><span class="n">UpperValueProperty</span><span class="p">);</span> <span class="p">}</span>
+            <span class="k">set</span> <span class="p">{</span> <span class="nf">SetValue</span><span class="p">(</span><span class="n">UpperValueProperty</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span> <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">DependencyProperty</span> <span class="n">UpperValueProperty</span> <span class="p">=</span>
+            <span class="n">DependencyProperty</span><span class="p">.</span><span class="nf">Register</span><span class="p">(</span><span class="s">"UpperValue"</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="kt">double</span><span class="p">),</span> <span class="k">typeof</span><span class="p">(</span><span class="n">DoubleSlider</span><span class="p">),</span> <span class="k">new</span> <span class="nf">UIPropertyMetadata</span><span class="p">(</span><span class="m">0d</span><span class="p">));</span>
+
+        <span class="c1">/// &lt;summary&gt;
+</span>        <span class="c1">/// Maximum is the highest value the right thumb can have
+</span>        <span class="c1">/// &lt;/summary&gt;
+</span>        <span class="k">public</span> <span class="kt">double</span> <span class="n">Maximum</span>
+        <span class="p">{</span>
+            <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="nf">GetValue</span><span class="p">(</span><span class="n">MaximumProperty</span><span class="p">);</span> <span class="p">}</span>
+            <span class="k">set</span> <span class="p">{</span> <span class="nf">SetValue</span><span class="p">(</span><span class="n">MaximumProperty</span><span class="p">,</span> <span class="k">value</span><span class="p">);</span> <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">static</span> <span class="k">readonly</span> <span class="n">DependencyProperty</span> <span class="n">MaximumProperty</span> <span class="p">=</span>
+            <span class="n">DependencyProperty</span><span class="p">.</span><span class="nf">Register</span><span class="p">(</span><span class="s">"Maximum"</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="kt">double</span><span class="p">),</span> <span class="k">typeof</span><span class="p">(</span><span class="n">DoubleSlider</span><span class="p">),</span> <span class="k">new</span> <span class="nf">UIPropertyMetadata</span><span class="p">(</span><span class="m">1d</span><span class="p">));</span>
+    <span class="p">}</span>
+
+</code></pre>
+</div>
 	     </div>
 	    
         </div>
