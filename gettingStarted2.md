@@ -270,5 +270,18 @@
 
 ```
 
+***
+**ResourceDictionnary**
 
+```xml
+<Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionnary/Instructions/InstructionsButtonShown.xaml"/>
+		<ResourceDictionary Source="Dictionnary/Instructions/InstructionsButtonHidden.xaml"/>
+				[...]
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+</Application.Resources>
+```
 
