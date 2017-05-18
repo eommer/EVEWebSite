@@ -380,22 +380,61 @@
 		  <p>
 		    In order to delimit a section of the video to be cut or otherwise edited, a slider with two thumbs was needed. The solution found to achieve this was a user control to create a new template.
 		  </p>
-		    <div class="language-cs highlighter-rouge">
-			    <pre class="highlight">
-			    <code>	
-			    	<span class="n">List</span>
-				<span class="p">&lt;</span>
-				<span class="n">Video</span>
-				<span class="p">&gt;</span>
-				<span class="n">videoArray</span>
-				<span class="p">=</span>
-				<span class="k">new</span>
-				<span class="n">List</span>
-				<span class="p">&lt;</span>
-				<span class="n">Video</span>
-				<span class="p">&gt;();</span>
-			</code></pre>
-              </div>
+		    <div class="language-xml highlighter-rouge"><pre class="highlight"><code>	<span class="nt">&lt;UserControl.Resources&gt;</span>
+			<span class="nt">&lt;ControlTemplate</span> <span class="na">x:Key=</span><span class="s">"simpleSlider"</span> <span class="na">TargetType=</span><span class="s">"{x:Type Slider}"</span><span class="nt">&gt;</span>
+			    <span class="nt">&lt;Border</span> <span class="na">SnapsToDevicePixels=</span><span class="s">"true"</span> <span class="na">BorderBrush=</span><span class="s">"{TemplateBinding BorderBrush}"</span> <span class="na">BorderThickness=</span><span class="s">"{TemplateBinding BorderThickness}"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;Grid&gt;</span>
+				    <span class="nt">&lt;Grid.RowDefinitions&gt;</span>
+					<span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">"Auto"</span><span class="nt">/&gt;</span>
+					<span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">"Auto"</span> <span class="na">MinHeight=</span><span class="s">"{TemplateBinding MinHeight}"</span><span class="nt">/&gt;</span>
+					<span class="nt">&lt;RowDefinition</span> <span class="na">Height=</span><span class="s">"Auto"</span><span class="nt">/&gt;</span>
+				    <span class="nt">&lt;/Grid.RowDefinitions&gt;</span>
+
+				    <span class="nt">&lt;Rectangle</span> <span class="na">x:Name=</span><span class="s">"PART_SelectionRange"</span><span class="nt">/&gt;</span>
+
+				    <span class="nt">&lt;Track</span> <span class="na">x:Name=</span><span class="s">"PART_Track"</span> <span class="na">Grid.Row=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;Track.Thumb&gt;</span>
+					    <span class="nt">&lt;Thumb</span> <span class="na">x:Name=</span><span class="s">"Thumb"</span><span class="nt">&gt;</span>
+						<span class="nt">&lt;Thumb.Template&gt;</span>
+						    <span class="nt">&lt;ControlTemplate</span> <span class="na">TargetType=</span><span class="s">"Thumb"</span><span class="nt">&gt;</span>
+							<span class="nt">&lt;Rectangle</span> <span class="na">Fill=</span><span class="s">"Black"</span> 
+								   <span class="na">Stroke=</span><span class="s">"#656767"</span>
+								   <span class="na">StrokeThickness=</span><span class="s">"0.5"</span> 
+								   <span class="na">Width=</span><span class="s">"7"</span>
+								   <span class="na">Height=</span><span class="s">"55"</span>
+								   <span class="na">SnapsToDevicePixels=</span><span class="s">"True"</span>
+								  <span class="na">RadiusX=</span><span class="s">"10"</span> <span class="na">RadiusY=</span><span class="s">"2"</span><span class="nt">/&gt;</span>
+						    <span class="nt">&lt;/ControlTemplate&gt;</span>
+						<span class="nt">&lt;/Thumb.Template&gt;</span>
+					    <span class="nt">&lt;/Thumb&gt;</span>
+					<span class="nt">&lt;/Track.Thumb&gt;</span>
+				    <span class="nt">&lt;/Track&gt;</span>
+				<span class="nt">&lt;/Grid&gt;</span>
+			    <span class="nt">&lt;/Border&gt;</span>
+			<span class="nt">&lt;/ControlTemplate&gt;</span>
+
+		    <span class="nt">&lt;/UserControl.Resources&gt;</span>
+		    <span class="nt">&lt;Grid</span> <span class="na">VerticalAlignment=</span><span class="s">"Center"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;Rectangle</span> <span class="na">Fill=</span><span class="s">"#FFAFB4B3"</span> <span class="na">VerticalAlignment=</span><span class="s">"Center"</span> <span class="na">Height=</span><span class="s">"45"</span> <span class="na">Margin=</span><span class="s">"5,0,5,0"</span> <span class="na">Stroke=</span><span class="s">"#3E4145"</span><span class="nt">/&gt;</span>
+
+			<span class="nt">&lt;Slider</span> <span class="na">x:Name=</span><span class="s">"LowerSlider"</span>
+				<span class="na">Minimum=</span><span class="s">"{Binding ElementName=root, Path=Minimum}"</span>
+				<span class="na">Maximum=</span><span class="s">"{Binding ElementName=root, Path=Maximum}"</span>
+				<span class="na">Value=</span><span class="s">"{Binding ElementName=root, Path=LowerValue, Mode=TwoWay}"</span>
+				<span class="na">Template=</span><span class="s">"{StaticResource simpleSlider}"</span>
+				<span class="na">Margin=</span><span class="s">"0,0,7,0"</span>
+				<span class="nt">/&gt;</span>
+
+			<span class="nt">&lt;Slider</span> <span class="na">x:Name=</span><span class="s">"UpperSlider"</span>
+				<span class="na">Minimum=</span><span class="s">"{Binding ElementName=root, Path=Minimum}"</span>
+				<span class="na">Maximum=</span><span class="s">"{Binding ElementName=root, Path=Maximum}"</span>
+				<span class="na">Value=</span><span class="s">"{Binding ElementName=root, Path=UpperValue, Mode=TwoWay}"</span>
+				<span class="na">Template=</span><span class="s">"{StaticResource simpleSlider}"</span>
+				<span class="na">Margin=</span><span class="s">"7,0,0,0"</span>
+				<span class="nt">/&gt;</span>
+		    <span class="nt">&lt;/Grid&gt;</span>
+		</code></pre>
+		</div>
 
 	     </div>
 	    
